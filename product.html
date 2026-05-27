@@ -82,87 +82,147 @@
                 <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EGF가 표피층에 흡수되는 단면 일러스트">
                   <defs>
                     <linearGradient id="epi-a" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#fef6e6"/><stop offset="1" stop-color="#efd2a1"/>
+                      <stop offset="0" stop-color="#fef6e6"/>
+                      <stop offset="0.5" stop-color="#f5dbae"/>
+                      <stop offset="1" stop-color="#efd2a1"/>
                     </linearGradient>
                     <linearGradient id="der-a" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#e6c193"/><stop offset="1" stop-color="#c89b62"/>
+                      <stop offset="0" stop-color="#e6c193"/>
+                      <stop offset="0.5" stop-color="#d3a673"/>
+                      <stop offset="1" stop-color="#b88751"/>
                     </linearGradient>
-                    <radialGradient id="drop-a" cx="0.5" cy="0.5" r="0.5">
-                      <stop offset="0" stop-color="#fff8e6" stop-opacity="0.95"/>
-                      <stop offset="0.6" stop-color="#fce4b9" stop-opacity="0.55"/>
+                    <linearGradient id="shade-a" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stop-color="#000" stop-opacity="0.15"/>
+                      <stop offset="0.15" stop-color="#000" stop-opacity="0"/>
+                      <stop offset="0.85" stop-color="#000" stop-opacity="0"/>
+                      <stop offset="1" stop-color="#000" stop-opacity="0.15"/>
+                    </linearGradient>
+                    <radialGradient id="cap-egf-a" cx="0.32" cy="0.3" r="0.7">
+                      <stop offset="0" stop-color="#ffe1bb"/>
+                      <stop offset="0.4" stop-color="#ed9555"/>
+                      <stop offset="1" stop-color="#9b5926"/>
+                    </radialGradient>
+                    <radialGradient id="cap-pdrn-a" cx="0.32" cy="0.3" r="0.7">
+                      <stop offset="0" stop-color="#d9ad7d"/>
+                      <stop offset="0.4" stop-color="#8a5d31"/>
+                      <stop offset="1" stop-color="#3d2812"/>
+                    </radialGradient>
+                    <radialGradient id="drop-a" cx="0.5" cy="0.55" r="0.5">
+                      <stop offset="0" stop-color="#fff8e6" stop-opacity="0.98"/>
+                      <stop offset="0.55" stop-color="#fce4b9" stop-opacity="0.6"/>
                       <stop offset="1" stop-color="#fce4b9" stop-opacity="0"/>
                     </radialGradient>
-                    <pattern id="cells-a" width="34" height="28" patternUnits="userSpaceOnUse">
-                      <circle cx="17" cy="14" r="7" fill="#fff" fill-opacity="0.22"/>
-                      <circle cx="0" cy="0" r="3" fill="#fff" fill-opacity="0.14"/>
-                      <circle cx="34" cy="0" r="3" fill="#fff" fill-opacity="0.14"/>
+                    <pattern id="cells-a" width="48" height="42" patternUnits="userSpaceOnUse">
+                      <path d="M14,4 L30,6 L36,18 L30,32 L14,34 L6,22 Z" fill="#fff" fill-opacity="0.18" stroke="#fff" stroke-opacity="0.12" stroke-width="0.5"/>
+                      <circle cx="22" cy="20" r="2.4" fill="#fff" fill-opacity="0.3"/>
+                      <path d="M40,30 L46,32 L48,40 L42,38 Z" fill="#fff" fill-opacity="0.14"/>
                     </pattern>
-                    <pattern id="fibers-a" width="44" height="44" patternUnits="userSpaceOnUse">
-                      <line x1="0" y1="0" x2="44" y2="44" stroke="#fff" stroke-opacity="0.18" stroke-width="0.7"/>
-                      <line x1="44" y1="0" x2="0" y2="44" stroke="#fff" stroke-opacity="0.18" stroke-width="0.7"/>
+                    <pattern id="fibers-a" width="100" height="70" patternUnits="userSpaceOnUse">
+                      <path d="M0,32 Q25,8 50,32 T100,32" stroke="#fff" stroke-opacity="0.22" stroke-width="0.9" fill="none"/>
+                      <path d="M0,52 Q20,28 42,46 T84,50" stroke="#fff" stroke-opacity="0.16" stroke-width="0.7" fill="none"/>
+                      <path d="M0,18 Q30,2 60,18 T100,18" stroke="#fff" stroke-opacity="0.13" stroke-width="0.6" fill="none"/>
                     </pattern>
                     <filter id="glow-a" x="-50%" y="-50%" width="200%" height="200%">
                       <feGaussianBlur stdDeviation="2.5" result="b"/>
                       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
                     </filter>
                   </defs>
+                  <!-- Air -->
                   <rect x="0" y="0" width="600" height="60" fill="#fdfbf7"/>
-                  <rect x="0" y="60" width="600" height="100" fill="url(#epi-a)"/>
-                  <rect x="0" y="60" width="600" height="100" fill="url(#cells-a)"/>
+                  <!-- Applicator pad hint at top center -->
+                  <path d="M 250,0 L 350,0 L 350,18 Q 300,30 250,18 Z" fill="#f3e0c1" stroke="#d4a373" stroke-width="1" opacity="0.85"/>
+                  <!-- Epidermis layer with curved top -->
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="url(#epi-a)"/>
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="url(#cells-a)"/>
+                  <!-- Dermis layer -->
                   <rect x="0" y="160" width="600" height="140" fill="url(#der-a)"/>
                   <rect x="0" y="160" width="600" height="140" fill="url(#fibers-a)"/>
+                  <!-- Subcutis -->
                   <rect x="0" y="300" width="600" height="60" fill="#a87f4f"/>
-                  <line x1="0" y1="60" x2="600" y2="60" stroke="#d4a373" stroke-width="0.7" stroke-dasharray="3 3"/>
-                  <line x1="0" y1="160" x2="600" y2="160" stroke="#8b6132" stroke-width="0.7" stroke-dasharray="3 3"/>
-                  <text x="14" y="80" font-size="10" font-weight="700" fill="#8c6c3a" letter-spacing="1.2">EPIDERMIS · 표피</text>
+                  <!-- Side shading overlay (3D depth feel) -->
+                  <rect x="0" y="60" width="600" height="300" fill="url(#shade-a)" pointer-events="none"/>
+                  <!-- Layer boundary lines -->
+                  <path d="M 0,160 L 600,160" stroke="#8b6132" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.55"/>
+                  <path d="M 0,300 L 600,300" stroke="#5a3b1d" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.55"/>
+                  <!-- Labels -->
+                  <text x="14" y="86" font-size="10" font-weight="700" fill="#8c6c3a" letter-spacing="1.2">EPIDERMIS · 표피</text>
                   <text x="14" y="180" font-size="10" font-weight="700" fill="#fff" letter-spacing="1.2">DERMIS · 진피</text>
                   <text x="14" y="322" font-size="10" font-weight="700" fill="#fff" letter-spacing="1.2">SUBCUTIS · 피하</text>
-                  <ellipse cx="300" cy="38" rx="110" ry="16" fill="url(#drop-a)">
-                    <animate attributeName="opacity" values="0;0.95;0.95;0.2;0" keyTimes="0;0.12;0.4;0.8;1" dur="4s" repeatCount="indefinite"/>
-                    <animate attributeName="rx" values="60;110;110;130;130" keyTimes="0;0.12;0.4;0.8;1" dur="4s" repeatCount="indefinite"/>
+                  <!-- Cream meniscus drop descending from applicator -->
+                  <path d="M 270,18 Q 280,28 290,30 Q 300,32 310,30 Q 320,28 330,18 Q 330,42 300,48 Q 270,42 270,18 Z" fill="url(#drop-a)">
+                    <animate attributeName="opacity" values="0;0.95;0.95;0.2;0" keyTimes="0;0.12;0.4;0.78;1" dur="4s" repeatCount="indefinite"/>
+                  </path>
+                  <!-- Contact spread ring on epidermis surface -->
+                  <ellipse cx="300" cy="66" rx="0" ry="0" fill="none" stroke="#d4a373" stroke-width="1.4" opacity="0">
+                    <animate attributeName="rx" values="0;0;90;160" keyTimes="0;0.18;0.45;0.85" dur="4s" repeatCount="indefinite"/>
+                    <animate attributeName="ry" values="0;0;6;9" keyTimes="0;0.18;0.45;0.85" dur="4s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0;0;0.65;0" keyTimes="0;0.18;0.45;0.85" dur="4s" repeatCount="indefinite"/>
                   </ellipse>
                   <g filter="url(#glow-a)">
-                    <circle cx="170" cy="42" r="6" fill="#E89853">
-                      <animate attributeName="cy" values="42;42;115;115;115" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                    <ellipse cx="170" cy="44" rx="8.5" ry="6.5" fill="url(#cap-egf-a)">
+                      <animate attributeName="cy" values="44;44;110;110;110" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0s"/>
-                    </circle>
+                    </ellipse>
+                    <ellipse cx="167" cy="41" rx="2.4" ry="1.6" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;107;107;107" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="opacity" values="0;0.65;0.65;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                    </ellipse>
+                    <!-- Diffusion ripple -->
                     <circle cx="170" cy="115" r="3" fill="none" stroke="#E89853" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;28;36" keyTimes="0;0.45;0.5;0.8;1" dur="4s" repeatCount="indefinite" begin="0s"/>
-                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.8;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="r" values="3;3;3;30;42" keyTimes="0;0.45;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.78;1" dur="4s" repeatCount="indefinite" begin="0s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-a)">
-                    <circle cx="260" cy="42" r="6" fill="#E89853">
-                      <animate attributeName="cy" values="42;42;115;115;115" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                    <ellipse cx="260" cy="44" rx="8.5" ry="6.5" fill="url(#cap-egf-a)">
+                      <animate attributeName="cy" values="44;44;110;110;110" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
-                    </circle>
+                    </ellipse>
+                    <ellipse cx="257" cy="41" rx="2.4" ry="1.6" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;107;107;107" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                      <animate attributeName="opacity" values="0;0.65;0.65;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                    </ellipse>
+                    <!-- Diffusion ripple -->
                     <circle cx="260" cy="115" r="3" fill="none" stroke="#E89853" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;28;36" keyTimes="0;0.45;0.5;0.8;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
-                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.8;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                      <animate attributeName="r" values="3;3;3;30;42" keyTimes="0;0.45;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.78;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-a)">
-                    <circle cx="350" cy="42" r="6" fill="#E89853">
-                      <animate attributeName="cy" values="42;42;115;115;115" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                    <ellipse cx="350" cy="44" rx="8.5" ry="6.5" fill="url(#cap-egf-a)">
+                      <animate attributeName="cy" values="44;44;110;110;110" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
-                    </circle>
+                    </ellipse>
+                    <ellipse cx="347" cy="41" rx="2.4" ry="1.6" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;107;107;107" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="opacity" values="0;0.65;0.65;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                    </ellipse>
+                    <!-- Diffusion ripple -->
                     <circle cx="350" cy="115" r="3" fill="none" stroke="#E89853" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;28;36" keyTimes="0;0.45;0.5;0.8;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
-                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.8;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="r" values="3;3;3;30;42" keyTimes="0;0.45;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.78;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-a)">
-                    <circle cx="430" cy="42" r="6" fill="#E89853">
-                      <animate attributeName="cy" values="42;42;115;115;115" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                    <ellipse cx="430" cy="44" rx="8.5" ry="6.5" fill="url(#cap-egf-a)">
+                      <animate attributeName="cy" values="44;44;110;110;110" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
-                    </circle>
+                    </ellipse>
+                    <ellipse cx="427" cy="41" rx="2.4" ry="1.6" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;107;107;107" keyTimes="0;0.18;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                      <animate attributeName="opacity" values="0;0.65;0.65;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                    </ellipse>
+                    <!-- Diffusion ripple -->
                     <circle cx="430" cy="115" r="3" fill="none" stroke="#E89853" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;28;36" keyTimes="0;0.45;0.5;0.8;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
-                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.8;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                      <animate attributeName="r" values="3;3;3;30;42" keyTimes="0;0.45;0.5;0.78;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.78;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
                     </circle>
                   </g>
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="#E89853" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0;0.22;0.08;0" keyTimes="0;0.55;0.6;0.7;0.85;1" dur="4s" repeatCount="indefinite"/>
+                  </path>
                   <g>
-                    <rect x="476" y="89" rx="12" ry="12" width="106" height="22" fill="#E89853" opacity="0">
+                    <rect x="476" y="89" rx="11" ry="11" width="106" height="22" fill="#E89853" opacity="0">
                       <animate attributeName="opacity" values="0;0;0.95;0.95;0" keyTimes="0;0.7;0.78;0.95;1" dur="4s" repeatCount="indefinite"/>
                     </rect>
                     <text x="529" y="104" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" letter-spacing="1.5" opacity="0">FILLED ✓<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.7;0.78;0.95;1" dur="4s" repeatCount="indefinite"/></text>
@@ -182,87 +242,143 @@
                 <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="PDRN이 진피층까지 침투하는 단면 일러스트">
                   <defs>
                     <linearGradient id="epi-b" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#fef6e6"/><stop offset="1" stop-color="#efd2a1"/>
+                      <stop offset="0" stop-color="#fef6e6"/>
+                      <stop offset="0.5" stop-color="#f5dbae"/>
+                      <stop offset="1" stop-color="#efd2a1"/>
                     </linearGradient>
                     <linearGradient id="der-b" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#e6c193"/><stop offset="1" stop-color="#c89b62"/>
+                      <stop offset="0" stop-color="#e6c193"/>
+                      <stop offset="0.5" stop-color="#d3a673"/>
+                      <stop offset="1" stop-color="#b88751"/>
                     </linearGradient>
-                    <radialGradient id="drop-b" cx="0.5" cy="0.5" r="0.5">
-                      <stop offset="0" stop-color="#fff8e6" stop-opacity="0.95"/>
-                      <stop offset="0.6" stop-color="#fce4b9" stop-opacity="0.55"/>
+                    <linearGradient id="shade-b" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stop-color="#000" stop-opacity="0.15"/>
+                      <stop offset="0.15" stop-color="#000" stop-opacity="0"/>
+                      <stop offset="0.85" stop-color="#000" stop-opacity="0"/>
+                      <stop offset="1" stop-color="#000" stop-opacity="0.15"/>
+                    </linearGradient>
+                    <radialGradient id="cap-egf-b" cx="0.32" cy="0.3" r="0.7">
+                      <stop offset="0" stop-color="#ffe1bb"/>
+                      <stop offset="0.4" stop-color="#ed9555"/>
+                      <stop offset="1" stop-color="#9b5926"/>
+                    </radialGradient>
+                    <radialGradient id="cap-pdrn-b" cx="0.32" cy="0.3" r="0.7">
+                      <stop offset="0" stop-color="#d9ad7d"/>
+                      <stop offset="0.4" stop-color="#8a5d31"/>
+                      <stop offset="1" stop-color="#3d2812"/>
+                    </radialGradient>
+                    <radialGradient id="drop-b" cx="0.5" cy="0.55" r="0.5">
+                      <stop offset="0" stop-color="#fff8e6" stop-opacity="0.98"/>
+                      <stop offset="0.55" stop-color="#fce4b9" stop-opacity="0.6"/>
                       <stop offset="1" stop-color="#fce4b9" stop-opacity="0"/>
                     </radialGradient>
-                    <pattern id="cells-b" width="34" height="28" patternUnits="userSpaceOnUse">
-                      <circle cx="17" cy="14" r="7" fill="#fff" fill-opacity="0.22"/>
-                      <circle cx="0" cy="0" r="3" fill="#fff" fill-opacity="0.14"/>
-                      <circle cx="34" cy="0" r="3" fill="#fff" fill-opacity="0.14"/>
+                    <pattern id="cells-b" width="48" height="42" patternUnits="userSpaceOnUse">
+                      <path d="M14,4 L30,6 L36,18 L30,32 L14,34 L6,22 Z" fill="#fff" fill-opacity="0.18" stroke="#fff" stroke-opacity="0.12" stroke-width="0.5"/>
+                      <circle cx="22" cy="20" r="2.4" fill="#fff" fill-opacity="0.3"/>
+                      <path d="M40,30 L46,32 L48,40 L42,38 Z" fill="#fff" fill-opacity="0.14"/>
                     </pattern>
-                    <pattern id="fibers-b" width="44" height="44" patternUnits="userSpaceOnUse">
-                      <line x1="0" y1="0" x2="44" y2="44" stroke="#fff" stroke-opacity="0.18" stroke-width="0.7"/>
-                      <line x1="44" y1="0" x2="0" y2="44" stroke="#fff" stroke-opacity="0.18" stroke-width="0.7"/>
+                    <pattern id="fibers-b" width="100" height="70" patternUnits="userSpaceOnUse">
+                      <path d="M0,32 Q25,8 50,32 T100,32" stroke="#fff" stroke-opacity="0.22" stroke-width="0.9" fill="none"/>
+                      <path d="M0,52 Q20,28 42,46 T84,50" stroke="#fff" stroke-opacity="0.16" stroke-width="0.7" fill="none"/>
+                      <path d="M0,18 Q30,2 60,18 T100,18" stroke="#fff" stroke-opacity="0.13" stroke-width="0.6" fill="none"/>
                     </pattern>
                     <filter id="glow-b" x="-50%" y="-50%" width="200%" height="200%">
                       <feGaussianBlur stdDeviation="2.5" result="b"/>
                       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
                     </filter>
                   </defs>
+                  <!-- Air -->
                   <rect x="0" y="0" width="600" height="60" fill="#fdfbf7"/>
-                  <rect x="0" y="60" width="600" height="100" fill="url(#epi-b)"/>
-                  <rect x="0" y="60" width="600" height="100" fill="url(#cells-b)"/>
+                  <!-- Applicator pad hint at top center -->
+                  <path d="M 250,0 L 350,0 L 350,18 Q 300,30 250,18 Z" fill="#f3e0c1" stroke="#d4a373" stroke-width="1" opacity="0.85"/>
+                  <!-- Epidermis layer with curved top -->
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="url(#epi-b)"/>
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="url(#cells-b)"/>
+                  <!-- Dermis layer -->
                   <rect x="0" y="160" width="600" height="140" fill="url(#der-b)"/>
                   <rect x="0" y="160" width="600" height="140" fill="url(#fibers-b)"/>
+                  <!-- Subcutis -->
                   <rect x="0" y="300" width="600" height="60" fill="#a87f4f"/>
-                  <line x1="0" y1="60" x2="600" y2="60" stroke="#d4a373" stroke-width="0.7" stroke-dasharray="3 3"/>
-                  <line x1="0" y1="160" x2="600" y2="160" stroke="#8b6132" stroke-width="0.7" stroke-dasharray="3 3"/>
-                  <text x="14" y="80" font-size="10" font-weight="700" fill="#8c6c3a" letter-spacing="1.2">EPIDERMIS · 표피</text>
+                  <!-- Side shading overlay (3D depth feel) -->
+                  <rect x="0" y="60" width="600" height="300" fill="url(#shade-b)" pointer-events="none"/>
+                  <!-- Layer boundary lines -->
+                  <path d="M 0,160 L 600,160" stroke="#8b6132" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.55"/>
+                  <path d="M 0,300 L 600,300" stroke="#5a3b1d" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.55"/>
+                  <!-- Labels -->
+                  <text x="14" y="86" font-size="10" font-weight="700" fill="#8c6c3a" letter-spacing="1.2">EPIDERMIS · 표피</text>
                   <text x="14" y="180" font-size="10" font-weight="700" fill="#fff" letter-spacing="1.2">DERMIS · 진피</text>
                   <text x="14" y="322" font-size="10" font-weight="700" fill="#fff" letter-spacing="1.2">SUBCUTIS · 피하</text>
-                  <ellipse cx="300" cy="38" rx="110" ry="16" fill="url(#drop-b)">
-                    <animate attributeName="opacity" values="0;0.95;0.95;0.2;0" keyTimes="0;0.12;0.4;0.8;1" dur="4s" repeatCount="indefinite"/>
-                    <animate attributeName="rx" values="60;110;110;130;130" keyTimes="0;0.12;0.4;0.8;1" dur="4s" repeatCount="indefinite"/>
+                  <!-- Cream meniscus drop descending from applicator -->
+                  <path d="M 270,18 Q 280,28 290,30 Q 300,32 310,30 Q 320,28 330,18 Q 330,42 300,48 Q 270,42 270,18 Z" fill="url(#drop-b)">
+                    <animate attributeName="opacity" values="0;0.95;0.95;0.2;0" keyTimes="0;0.12;0.4;0.78;1" dur="4s" repeatCount="indefinite"/>
+                  </path>
+                  <!-- Contact spread ring on epidermis surface -->
+                  <ellipse cx="300" cy="66" rx="0" ry="0" fill="none" stroke="#d4a373" stroke-width="1.4" opacity="0">
+                    <animate attributeName="rx" values="0;0;90;160" keyTimes="0;0.18;0.45;0.85" dur="4s" repeatCount="indefinite"/>
+                    <animate attributeName="ry" values="0;0;6;9" keyTimes="0;0.18;0.45;0.85" dur="4s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0;0;0.65;0" keyTimes="0;0.18;0.45;0.85" dur="4s" repeatCount="indefinite"/>
                   </ellipse>
                   <g filter="url(#glow-b)">
-                    <circle cx="170" cy="42" r="7" fill="#7B4F2A">
-                      <animate attributeName="cy" values="42;42;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                    <ellipse cx="170" cy="44" rx="9" ry="7" fill="url(#cap-pdrn-b)">
+                      <animate attributeName="cy" values="44;44;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0s"/>
-                    </circle>
-                    <circle cx="170" cy="220" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;30;40" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                    </ellipse>
+                    <ellipse cx="167" cy="41" rx="2.6" ry="1.7" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;217;217;217" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="opacity" values="0;0.55;0.55;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0s"/>
+                    </ellipse>
+                    <circle cx="170" cy="225" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
+                      <animate attributeName="r" values="3;3;3;32;46" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0s"/>
                       <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.55;0.67;0.86;1" dur="4s" repeatCount="indefinite" begin="0s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-b)">
-                    <circle cx="260" cy="42" r="7" fill="#7B4F2A">
-                      <animate attributeName="cy" values="42;42;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                    <ellipse cx="260" cy="44" rx="9" ry="7" fill="url(#cap-pdrn-b)">
+                      <animate attributeName="cy" values="44;44;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
-                    </circle>
-                    <circle cx="260" cy="220" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;30;40" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                    </ellipse>
+                    <ellipse cx="257" cy="41" rx="2.6" ry="1.7" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;217;217;217" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                      <animate attributeName="opacity" values="0;0.55;0.55;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
+                    </ellipse>
+                    <circle cx="260" cy="225" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
+                      <animate attributeName="r" values="3;3;3;32;46" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
                       <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.55;0.67;0.86;1" dur="4s" repeatCount="indefinite" begin="0.3s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-b)">
-                    <circle cx="350" cy="42" r="7" fill="#7B4F2A">
-                      <animate attributeName="cy" values="42;42;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                    <ellipse cx="350" cy="44" rx="9" ry="7" fill="url(#cap-pdrn-b)">
+                      <animate attributeName="cy" values="44;44;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
-                    </circle>
-                    <circle cx="350" cy="220" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;30;40" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                    </ellipse>
+                    <ellipse cx="347" cy="41" rx="2.6" ry="1.7" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;217;217;217" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="opacity" values="0;0.55;0.55;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
+                    </ellipse>
+                    <circle cx="350" cy="225" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
+                      <animate attributeName="r" values="3;3;3;32;46" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
                       <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.55;0.67;0.86;1" dur="4s" repeatCount="indefinite" begin="0.6s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-b)">
-                    <circle cx="430" cy="42" r="7" fill="#7B4F2A">
-                      <animate attributeName="cy" values="42;42;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                    <ellipse cx="430" cy="44" rx="9" ry="7" fill="url(#cap-pdrn-b)">
+                      <animate attributeName="cy" values="44;44;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
-                    </circle>
-                    <circle cx="430" cy="220" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;30;40" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                    </ellipse>
+                    <ellipse cx="427" cy="41" rx="2.6" ry="1.7" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;217;217;217" keyTimes="0;0.18;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                      <animate attributeName="opacity" values="0;0.55;0.55;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
+                    </ellipse>
+                    <circle cx="430" cy="225" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
+                      <animate attributeName="r" values="3;3;3;32;46" keyTimes="0;0.55;0.62;0.86;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
                       <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.55;0.67;0.86;1" dur="4s" repeatCount="indefinite" begin="0.9s"/>
                     </circle>
                   </g>
+                  <rect x="0" y="160" width="600" height="140" fill="#7B4F2A" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0;0.22;0.08;0" keyTimes="0;0.6;0.65;0.75;0.9;1" dur="4s" repeatCount="indefinite"/>
+                  </rect>
                   <g>
-                    <rect x="476" y="193" rx="12" ry="12" width="106" height="22" fill="#7B4F2A" opacity="0">
+                    <rect x="476" y="193" rx="11" ry="11" width="106" height="22" fill="#7B4F2A" opacity="0">
                       <animate attributeName="opacity" values="0;0;0.95;0.95;0" keyTimes="0;0.7;0.78;0.95;1" dur="4s" repeatCount="indefinite"/>
                     </rect>
                     <text x="529" y="208" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" letter-spacing="1.5" opacity="0">LOCKED ✓<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.7;0.78;0.95;1" dur="4s" repeatCount="indefinite"/></text>
@@ -282,107 +398,177 @@
                 <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EGF와 PDRN이 동시에 표피와 진피에 작용하는 단면 일러스트">
                   <defs>
                     <linearGradient id="epi-c" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#fef6e6"/><stop offset="1" stop-color="#efd2a1"/>
+                      <stop offset="0" stop-color="#fef6e6"/>
+                      <stop offset="0.5" stop-color="#f5dbae"/>
+                      <stop offset="1" stop-color="#efd2a1"/>
                     </linearGradient>
                     <linearGradient id="der-c" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stop-color="#e6c193"/><stop offset="1" stop-color="#c89b62"/>
+                      <stop offset="0" stop-color="#e6c193"/>
+                      <stop offset="0.5" stop-color="#d3a673"/>
+                      <stop offset="1" stop-color="#b88751"/>
                     </linearGradient>
-                    <radialGradient id="drop-c" cx="0.5" cy="0.5" r="0.5">
-                      <stop offset="0" stop-color="#fff8e6" stop-opacity="0.95"/>
-                      <stop offset="0.6" stop-color="#fce4b9" stop-opacity="0.55"/>
+                    <linearGradient id="shade-c" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0" stop-color="#000" stop-opacity="0.15"/>
+                      <stop offset="0.15" stop-color="#000" stop-opacity="0"/>
+                      <stop offset="0.85" stop-color="#000" stop-opacity="0"/>
+                      <stop offset="1" stop-color="#000" stop-opacity="0.15"/>
+                    </linearGradient>
+                    <radialGradient id="cap-egf-c" cx="0.32" cy="0.3" r="0.7">
+                      <stop offset="0" stop-color="#ffe1bb"/>
+                      <stop offset="0.4" stop-color="#ed9555"/>
+                      <stop offset="1" stop-color="#9b5926"/>
+                    </radialGradient>
+                    <radialGradient id="cap-pdrn-c" cx="0.32" cy="0.3" r="0.7">
+                      <stop offset="0" stop-color="#d9ad7d"/>
+                      <stop offset="0.4" stop-color="#8a5d31"/>
+                      <stop offset="1" stop-color="#3d2812"/>
+                    </radialGradient>
+                    <radialGradient id="drop-c" cx="0.5" cy="0.55" r="0.5">
+                      <stop offset="0" stop-color="#fff8e6" stop-opacity="0.98"/>
+                      <stop offset="0.55" stop-color="#fce4b9" stop-opacity="0.6"/>
                       <stop offset="1" stop-color="#fce4b9" stop-opacity="0"/>
                     </radialGradient>
-                    <pattern id="cells-c" width="34" height="28" patternUnits="userSpaceOnUse">
-                      <circle cx="17" cy="14" r="7" fill="#fff" fill-opacity="0.22"/>
-                      <circle cx="0" cy="0" r="3" fill="#fff" fill-opacity="0.14"/>
-                      <circle cx="34" cy="0" r="3" fill="#fff" fill-opacity="0.14"/>
+                    <pattern id="cells-c" width="48" height="42" patternUnits="userSpaceOnUse">
+                      <path d="M14,4 L30,6 L36,18 L30,32 L14,34 L6,22 Z" fill="#fff" fill-opacity="0.18" stroke="#fff" stroke-opacity="0.12" stroke-width="0.5"/>
+                      <circle cx="22" cy="20" r="2.4" fill="#fff" fill-opacity="0.3"/>
+                      <path d="M40,30 L46,32 L48,40 L42,38 Z" fill="#fff" fill-opacity="0.14"/>
                     </pattern>
-                    <pattern id="fibers-c" width="44" height="44" patternUnits="userSpaceOnUse">
-                      <line x1="0" y1="0" x2="44" y2="44" stroke="#fff" stroke-opacity="0.18" stroke-width="0.7"/>
-                      <line x1="44" y1="0" x2="0" y2="44" stroke="#fff" stroke-opacity="0.18" stroke-width="0.7"/>
+                    <pattern id="fibers-c" width="100" height="70" patternUnits="userSpaceOnUse">
+                      <path d="M0,32 Q25,8 50,32 T100,32" stroke="#fff" stroke-opacity="0.22" stroke-width="0.9" fill="none"/>
+                      <path d="M0,52 Q20,28 42,46 T84,50" stroke="#fff" stroke-opacity="0.16" stroke-width="0.7" fill="none"/>
+                      <path d="M0,18 Q30,2 60,18 T100,18" stroke="#fff" stroke-opacity="0.13" stroke-width="0.6" fill="none"/>
                     </pattern>
                     <filter id="glow-c" x="-50%" y="-50%" width="200%" height="200%">
                       <feGaussianBlur stdDeviation="2.5" result="b"/>
                       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
                     </filter>
                   </defs>
+                  <!-- Air -->
                   <rect x="0" y="0" width="600" height="60" fill="#fdfbf7"/>
-                  <rect x="0" y="60" width="600" height="100" fill="url(#epi-c)"/>
-                  <rect x="0" y="60" width="600" height="100" fill="url(#cells-c)"/>
+                  <!-- Applicator pad hint at top center -->
+                  <path d="M 250,0 L 350,0 L 350,18 Q 300,30 250,18 Z" fill="#f3e0c1" stroke="#d4a373" stroke-width="1" opacity="0.85"/>
+                  <!-- Epidermis layer with curved top -->
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="url(#epi-c)"/>
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="url(#cells-c)"/>
+                  <!-- Dermis layer -->
                   <rect x="0" y="160" width="600" height="140" fill="url(#der-c)"/>
                   <rect x="0" y="160" width="600" height="140" fill="url(#fibers-c)"/>
+                  <!-- Subcutis -->
                   <rect x="0" y="300" width="600" height="60" fill="#a87f4f"/>
-                  <line x1="0" y1="60" x2="600" y2="60" stroke="#d4a373" stroke-width="0.7" stroke-dasharray="3 3"/>
-                  <line x1="0" y1="160" x2="600" y2="160" stroke="#8b6132" stroke-width="0.7" stroke-dasharray="3 3"/>
-                  <text x="14" y="80" font-size="10" font-weight="700" fill="#8c6c3a" letter-spacing="1.2">EPIDERMIS · 표피</text>
+                  <!-- Side shading overlay (3D depth feel) -->
+                  <rect x="0" y="60" width="600" height="300" fill="url(#shade-c)" pointer-events="none"/>
+                  <!-- Layer boundary lines -->
+                  <path d="M 0,160 L 600,160" stroke="#8b6132" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.55"/>
+                  <path d="M 0,300 L 600,300" stroke="#5a3b1d" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.55"/>
+                  <!-- Labels -->
+                  <text x="14" y="86" font-size="10" font-weight="700" fill="#8c6c3a" letter-spacing="1.2">EPIDERMIS · 표피</text>
                   <text x="14" y="180" font-size="10" font-weight="700" fill="#fff" letter-spacing="1.2">DERMIS · 진피</text>
                   <text x="14" y="322" font-size="10" font-weight="700" fill="#fff" letter-spacing="1.2">SUBCUTIS · 피하</text>
-                  <ellipse cx="300" cy="38" rx="110" ry="16" fill="url(#drop-c)">
-                    <animate attributeName="opacity" values="0;0.95;0.95;0.2;0" keyTimes="0;0.12;0.4;0.8;1" dur="4.5s" repeatCount="indefinite"/>
-                    <animate attributeName="rx" values="60;110;110;130;130" keyTimes="0;0.12;0.4;0.8;1" dur="4.5s" repeatCount="indefinite"/>
+                  <!-- Cream meniscus drop descending from applicator -->
+                  <path d="M 270,18 Q 280,28 290,30 Q 300,32 310,30 Q 320,28 330,18 Q 330,42 300,48 Q 270,42 270,18 Z" fill="url(#drop-c)">
+                    <animate attributeName="opacity" values="0;0.95;0.95;0.2;0" keyTimes="0;0.12;0.4;0.78;1" dur="4.5s" repeatCount="indefinite"/>
+                  </path>
+                  <!-- Contact spread ring on epidermis surface -->
+                  <ellipse cx="300" cy="66" rx="0" ry="0" fill="none" stroke="#d4a373" stroke-width="1.4" opacity="0">
+                    <animate attributeName="rx" values="0;0;90;160" keyTimes="0;0.18;0.45;0.85" dur="4.5s" repeatCount="indefinite"/>
+                    <animate attributeName="ry" values="0;0;6;9" keyTimes="0;0.18;0.45;0.85" dur="4.5s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" values="0;0;0.65;0" keyTimes="0;0.18;0.45;0.85" dur="4.5s" repeatCount="indefinite"/>
                   </ellipse>
                   <g filter="url(#glow-c)">
-                    <circle cx="180" cy="42" r="6" fill="#E89853">
-                      <animate attributeName="cy" values="42;42;115;115;115" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                    <ellipse cx="180" cy="44" rx="8.5" ry="6.5" fill="url(#cap-egf-c)">
+                      <animate attributeName="cy" values="44;44;110;110;110" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
-                    </circle>
+                    </ellipse>
+                    <ellipse cx="177" cy="41" rx="2.4" ry="1.6" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;107;107;107" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="opacity" values="0;0.65;0.65;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                    </ellipse>
+                    <!-- Diffusion ripple -->
                     <circle cx="180" cy="115" r="3" fill="none" stroke="#E89853" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;28;36" keyTimes="0;0.45;0.5;0.8;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
-                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.8;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="r" values="3;3;3;30;42" keyTimes="0;0.45;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-c)">
-                    <circle cx="380" cy="42" r="6" fill="#E89853">
-                      <animate attributeName="cy" values="42;42;115;115;115" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                    <ellipse cx="380" cy="44" rx="8.5" ry="6.5" fill="url(#cap-egf-c)">
+                      <animate attributeName="cy" values="44;44;110;110;110" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
-                    </circle>
+                    </ellipse>
+                    <ellipse cx="377" cy="41" rx="2.4" ry="1.6" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;107;107;107" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="opacity" values="0;0.65;0.65;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                    </ellipse>
+                    <!-- Diffusion ripple -->
                     <circle cx="380" cy="115" r="3" fill="none" stroke="#E89853" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;28;36" keyTimes="0;0.45;0.5;0.8;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
-                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.8;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="r" values="3;3;3;30;42" keyTimes="0;0.45;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.78;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-c)">
-                    <circle cx="470" cy="42" r="6" fill="#E89853">
-                      <animate attributeName="cy" values="42;42;115;115;115" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                    <ellipse cx="470" cy="44" rx="8.5" ry="6.5" fill="url(#cap-egf-c)">
+                      <animate attributeName="cy" values="44;44;110;110;110" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
-                    </circle>
+                    </ellipse>
+                    <ellipse cx="467" cy="41" rx="2.4" ry="1.6" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;107;107;107" keyTimes="0;0.18;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                      <animate attributeName="opacity" values="0;0.65;0.65;0;0" keyTimes="0;0.2;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                    </ellipse>
+                    <!-- Diffusion ripple -->
                     <circle cx="470" cy="115" r="3" fill="none" stroke="#E89853" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;28;36" keyTimes="0;0.45;0.5;0.8;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
-                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.8;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                      <animate attributeName="r" values="3;3;3;30;42" keyTimes="0;0.45;0.5;0.78;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                      <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.45;0.55;0.78;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-c)">
-                    <circle cx="220" cy="42" r="7" fill="#7B4F2A">
-                      <animate attributeName="cy" values="42;42;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                    <ellipse cx="220" cy="44" rx="9" ry="7" fill="url(#cap-pdrn-c)">
+                      <animate attributeName="cy" values="44;44;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
-                    </circle>
-                    <circle cx="220" cy="220" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;30;40" keyTimes="0;0.55;0.62;0.86;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                    </ellipse>
+                    <ellipse cx="217" cy="41" rx="2.6" ry="1.7" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;217;217;217" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                      <animate attributeName="opacity" values="0;0.55;0.55;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
+                    </ellipse>
+                    <circle cx="220" cy="225" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
+                      <animate attributeName="r" values="3;3;3;32;46" keyTimes="0;0.55;0.62;0.86;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
                       <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.55;0.67;0.86;1" dur="4.5s" repeatCount="indefinite" begin="0s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-c)">
-                    <circle cx="310" cy="42" r="7" fill="#7B4F2A">
-                      <animate attributeName="cy" values="42;42;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                    <ellipse cx="310" cy="44" rx="9" ry="7" fill="url(#cap-pdrn-c)">
+                      <animate attributeName="cy" values="44;44;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
-                    </circle>
-                    <circle cx="310" cy="220" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;30;40" keyTimes="0;0.55;0.62;0.86;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                    </ellipse>
+                    <ellipse cx="307" cy="41" rx="2.6" ry="1.7" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;217;217;217" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                      <animate attributeName="opacity" values="0;0.55;0.55;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
+                    </ellipse>
+                    <circle cx="310" cy="225" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
+                      <animate attributeName="r" values="3;3;3;32;46" keyTimes="0;0.55;0.62;0.86;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
                       <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.55;0.67;0.86;1" dur="4.5s" repeatCount="indefinite" begin="0.6s"/>
                     </circle>
                   </g>
                   <g filter="url(#glow-c)">
-                    <circle cx="420" cy="42" r="7" fill="#7B4F2A">
-                      <animate attributeName="cy" values="42;42;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                    <ellipse cx="420" cy="44" rx="9" ry="7" fill="url(#cap-pdrn-c)">
+                      <animate attributeName="cy" values="44;44;220;220;220" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
                       <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
-                    </circle>
-                    <circle cx="420" cy="220" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
-                      <animate attributeName="r" values="3;3;3;30;40" keyTimes="0;0.55;0.62;0.86;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                    </ellipse>
+                    <ellipse cx="417" cy="41" rx="2.6" ry="1.7" fill="#fff" opacity="0">
+                      <animate attributeName="cy" values="41;41;217;217;217" keyTimes="0;0.18;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                      <animate attributeName="opacity" values="0;0.55;0.55;0;0" keyTimes="0;0.2;0.62;0.85;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
+                    </ellipse>
+                    <circle cx="420" cy="225" r="3" fill="none" stroke="#7B4F2A" stroke-width="2">
+                      <animate attributeName="r" values="3;3;3;32;46" keyTimes="0;0.55;0.62;0.86;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
                       <animate attributeName="opacity" values="0;0;0.85;0.3;0" keyTimes="0;0.55;0.67;0.86;1" dur="4.5s" repeatCount="indefinite" begin="1.2s"/>
                     </circle>
                   </g>
+                  <path d="M 0,68 Q 100,56 200,66 T 400,64 T 600,66 L 600,160 L 0,160 Z" fill="#E89853" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0;0.22;0.08;0" keyTimes="0;0.55;0.6;0.7;0.85;1" dur="4.5s" repeatCount="indefinite"/>
+                  </path>
+                  <rect x="0" y="160" width="600" height="140" fill="#7B4F2A" opacity="0">
+                    <animate attributeName="opacity" values="0;0;0;0.22;0.08;0" keyTimes="0;0.6;0.65;0.75;0.9;1" dur="4.5s" repeatCount="indefinite"/>
+                  </rect>
                   <g>
-                    <rect x="476" y="143" rx="12" ry="12" width="106" height="22" fill="#a16934" opacity="0">
+                    <rect x="476" y="143" rx="11" ry="11" width="106" height="22" fill="#a16934" opacity="0">
                       <animate attributeName="opacity" values="0;0;0.95;0.95;0" keyTimes="0;0.7;0.78;0.95;1" dur="4.5s" repeatCount="indefinite"/>
                     </rect>
                     <text x="529" y="158" text-anchor="middle" font-size="11" font-weight="800" fill="#fff" letter-spacing="1.5" opacity="0">REVIVED ✓<animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.7;0.78;0.95;1" dur="4.5s" repeatCount="indefinite"/></text>
