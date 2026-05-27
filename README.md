@@ -1,36 +1,42 @@
-# REVIONrx — Brand site prototype
+# REVION ℞ — 약사가 처방하는 더마 코스메틱
 
-Pharmacy-grade PDRN × EGF skincare brand site. Built with Next.js 16 (App Router, Turbopack) and Tailwind CSS v4.
+baropharm 디자인팀 프로토타입을 베이스로, Figma에서 작업한 3종 상세페이지를
+얹어본 정적 사이트.
 
-## Pages
+## 페이지
 
-- `/` — Landing (hero, science, clinical, 3-product lineup, routine, pharmacy band)
-- `/products/mask` — Origin Rejuvenating Mask
-- `/products/cream` — Origin Rejuvenating Cream
-- `/products/sunscreen` — Origin Rejuvenating Moisture Sun Cream
+| URL | 설명 |
+|---|---|
+| `index.html` | 메인 (히어로 슬라이드 / SIGNATURE 컬렉션 / 베스트셀러 / 인스타) |
+| `about.html` | 브랜드 스토리 |
+| `shop.html` | 상품 리스트 |
+| `product.html` | **상세 · Cream** (Origin Rejuvenating Cream) |
+| `mask.html` | **상세 · Mask** (Origin Rejuvenating Mask, 신규) |
+| `sunscreen.html` | **상세 · Sun Cream** (Origin Rejuvenating Moisture Sun Cream, 신규) |
+| `pharmacy.html` | 약국 찾기 |
+| `event.html` | 이벤트 |
+| `community.html` | 커뮤니티 |
+| `cart.html` | 장바구니 |
+| `login.html` / `join.html` | 로그인 / 회원가입 |
 
-Copy is ported from the in-progress Korean→English translation of the original REVIONrx detail pages (see Figma `EN_Copy_*` frames).
+`index.html` 상단 SIGNATURE COLLECTION 카드 3개는 각 제품 상세로 연결됩니다.
 
-## Brand mapping
+## 기술 스택
 
-- **EGF refills** (FILL — surface, epidermis)
-- **PDRN seals** (LOCK — depth, dermis)
-- Pharmacy-exclusive distribution
-- Clinical trial reference: OATC Skin Clinical Trial Center, Dec 15–16 2025, n=22
+- 정적 HTML / CSS / Vanilla JS
+- 폰트: Pretendard Variable
+- 아이콘: 인라인 SVG
+- `partials.js` — 헤더/푸터/마퀴/모달 공통 컴포넌트
+- `cart.js` — localStorage 기반 장바구니
 
-## Develop
+## 로컬 실행
 
 ```bash
-npm install
-npm run dev      # http://localhost:3000
-npm run build    # production build (static)
-npm run lint
+python3 -m http.server 4567
+# http://localhost:4567
 ```
 
-## Stack
+## 출처
 
-- Next.js 16 (App Router, Turbopack)
-- React 19
-- Tailwind CSS 4
-- TypeScript 5
-- Fonts: Inter (body), Playfair Display (display)
+- 디자인 베이스: 디자인팀 프로토타입 (chacha-baropharm/revion-rx)
+- 상세페이지 카피: Figma EN_Copy_* 작업을 한국어로 재구성 (Mask / Sunscreen)

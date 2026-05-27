@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 418 79" fill="none" preserveAspectRatio="xMidYMid meet" role="img" aria-label="FILL & LOCK">
+  <g fill="#1F1F1F">
+    <path d="M0.684 38.083C-2.122 48.783 3.937 58.128 14.555 60.712C9.545 56.827 7.806 47.314 10.768 36.905C13.314 27.958 18.661 20.731 24.346 17.65C13.282 19.649 3.363 27.862 0.680 38.083Z"/>
+    <path d="M403.444 17.951C408.452 21.835 410.190 31.348 407.230 41.760C404.684 50.706 399.338 57.932 393.654 61.013C404.716 59.014 414.634 50.802 417.316 40.582C420.121 29.883 414.063 20.539 403.448 17.955Z"/>
+    <text x="209" y="55" text-anchor="middle"
+          font-family="'Times New Roman', Georgia, serif"
+          font-weight="700" font-size="50" letter-spacing="-1">FILL <tspan font-size="36">&amp;</tspan> LOCK</text>
+  </g>
+</svg>

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>REVION ℞ — 약사가 만든 더마 코스메틱</title>
+<meta name="description" content="EGF로 채우고 PDRN으로 잠그는 단 하나의 회복 루틴. 약국에서 시작된 처방형 더마 코스메틱, 레비온." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="preload" as="image" href="images/hero-main.png" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div data-partial="announce"></div>
+<div data-partial="header" data-current="home"></div>
+
+<!-- Hero carousel -->
+<section class="hero" aria-roledescription="carousel" aria-label="메인 비주얼">
+  <div class="hero__viewport">
+    <ul class="hero__track">
+      <li class="hero__slide is-active">
+        <a class="hero__link" href="product.html" aria-label="제품 상세로 이동"></a>
+        <img src="images/hero-main.png" alt="레비온 PDRN EGF 크림을 든 모델" loading="eager" fetchpriority="high" />
+        <div class="hero__content container">
+          <p class="hero__eyebrow">레비온 공식 스토어</p>
+          <h1 class="hero__title">피부가 가장 빛나는<br/>순간까지</h1>
+          <p class="hero__sub">EGF로 채우고 PDRN으로 잠그는 단 하나의 회복 루틴</p>
+          <a class="btn btn--primary" href="product.html">SHOP NOW
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </li>
+      <li class="hero__slide">
+        <a class="hero__link" href="product.html" aria-label="제품 상세로 이동"></a>
+        <img src="images/hero-2.png" alt="레비온 PDRN EGF 크림을 든 모델" loading="lazy" />
+        <div class="hero__content container">
+          <p class="hero__eyebrow">SIGNATURE CREAM</p>
+          <h1 class="hero__title">한 번 바를수록<br/>매일이 달라집니다</h1>
+          <p class="hero__sub">PDRN 1,200ppm · EGF 2ppm 듀얼 부스팅 포뮬러</p>
+          <a class="btn btn--primary" href="product.html">크림 보러가기
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </li>
+      <li class="hero__slide">
+        <a class="hero__link" href="product.html" aria-label="제품 상세로 이동"></a>
+        <img src="images/hero-3.png" alt="레비온 데일리 케어 제품을 든 모델" loading="lazy" />
+        <div class="hero__content container">
+          <p class="hero__eyebrow">DAILY CARE ROUTINE</p>
+          <h1 class="hero__title">민감한 피부도<br/>매일 안심하고</h1>
+          <p class="hero__sub">약국에서 검증된 저자극 더마 포뮬러</p>
+          <a class="btn btn--primary" href="product.html">전체 상품 보기
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <button class="hero__arrow hero__arrow--prev" aria-label="이전 슬라이드">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+  </button>
+  <button class="hero__arrow hero__arrow--next" aria-label="다음 슬라이드">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+  </button>
+  <div class="hero__bars" role="tablist" aria-label="히어로 슬라이드 선택">
+    <button type="button" class="hero__bar is-active" data-slide="0" aria-label="1번 슬라이드"><span></span></button>
+    <button type="button" class="hero__bar" data-slide="1" aria-label="2번 슬라이드"><span></span></button>
+    <button type="button" class="hero__bar" data-slide="2" aria-label="3번 슬라이드"><span></span></button>
+  </div>
+</section>
+
+<div data-partial="marquee"></div>
+
+<!-- Signature collection -->
+<section class="section section--signature" id="shop">
+  <div class="container">
+    <header class="section__head section__head--split">
+      <div>
+        <p class="eyebrow">SIGNATURE COLLECTION</p>
+        <img src="images/fillnlock.svg" alt="FILL & LOCK" class="fillnlock-mark" />
+        <h2 class="display">3-Step Daily Routine</h2>
+      </div>
+      <div class="section__head-right">
+        <img src="images/logo2.svg" alt="REVION Rx Seal" class="seal-mark" />
+      </div>
+    </header>
+
+    <div class="product-grid">
+      <article class="card">
+        <a class="card__media" href="product.html">
+          <img src="images/product-cream-1.webp" alt="REVION Rx PDRN EGF Origin Rejuvenating Cream" loading="lazy" />
+          <video class="card__hover-video" src="media/cream-hover.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+          <span class="badge badge--best">BEST</span>
+          <button class="icon-btn" aria-label="찜하기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </button>
+        </a>
+        <div class="card__body">
+          <h3 class="card__title">REVION rx PDRN EGF Origin Rejuvenating Cream</h3>
+          <p class="card__sub">EGF와 PDRN 2가지 성분을 한 번에 담은 유일한 크림</p>
+          <ul class="tags"><li>리쥬비네이팅</li><li>저자극</li><li>약국 단독 판매</li><li>재구매</li></ul>
+          <div class="card__divider"></div>
+          <div class="price">
+            <span class="price__discount">20%</span>
+            <span class="price__now">45,000원</span>
+            <span class="price__was">56,000원</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__media" href="mask.html">
+          <img src="images/product-cream-2.webp" alt="REVION Rx PDRN EGF Origin Rejuvenating Mask" loading="lazy" />
+          <img class="card__hover-image" src="images/mask-texture.png" alt="" loading="lazy" />
+          <button class="icon-btn" aria-label="찜하기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </button>
+        </a>
+        <div class="card__body">
+          <h3 class="card__title">REVION rx PDRN EGF Origin Rejuvenating Mask</h3>
+          <p class="card__sub">5겹 코튼 시트에 PDRN 1,200ppm을 가득 담은 마스크팩</p>
+          <ul class="tags"><li>고보습</li><li>저자극</li><li>약국 단독 판매</li></ul>
+          <div class="card__divider"></div>
+          <div class="price">
+            <span class="price__discount">20%</span>
+            <span class="price__now">45,000원</span>
+            <span class="price__was">56,000원</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a class="card__media" href="sunscreen.html">
+          <img src="images/product-mask-1.webp" alt="REVION Rx PDRN EGF Origin Rejuvenating Sun Cream" loading="lazy" />
+          <img class="card__hover-image" src="images/suncream-texture.png" alt="" loading="lazy" />
+          <span class="badge badge--new">NEW</span>
+          <button class="icon-btn" aria-label="찜하기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </button>
+        </a>
+        <div class="card__body">
+          <h3 class="card__title">REVION rx PDRN EGF Origin Rejuvenating Sun Cream</h3>
+          <p class="card__sub">SPF50+ PA++++, 끈적임 없이 가볍게 마무리되는 데일리 선크림</p>
+          <ul class="tags"><li>SPF50+</li><li>저자극</li><li>약국 단독 판매</li></ul>
+          <div class="card__divider"></div>
+          <div class="price">
+            <span class="price__discount">20%</span>
+            <span class="price__now">45,000원</span>
+            <span class="price__was">56,000원</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Best Sellers -->
+<section class="section section--bestsellers">
+  <div class="container">
+    <header class="section__head section__head--center">
+      <h2 class="display">Best Sellers</h2>
+    </header>
+
+    <div class="product-grid product-grid--4">
+      <article class="card card--sm">
+        <a class="card__media" href="product.html">
+          <img src="images/giftset-main.webp" alt="REVION rx Signature Gift Set" loading="lazy" />
+          <span class="badge badge--gift">GIFT</span>
+          <button class="icon-btn" aria-label="찜하기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </button>
+        </a>
+        <div class="card__body">
+          <h3 class="card__title">REVION rx Signature Gift Set</h3>
+          <p class="card__sub">크림, 마스크팩, 선크림 3종 기프트 세트로 쇼핑백 증정</p>
+          <ul class="tags"><li>BEST</li><li>저자극</li><li>약국 단독 판매</li></ul>
+          <div class="card__divider"></div>
+          <div class="price">
+            <span class="price__discount">20%</span>
+            <span class="price__now">112,000원</span>
+            <span class="price__was">140,000원</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--sm">
+        <a class="card__media" href="product.html">
+          <img src="images/product-suncream-1.webp" alt="REVION rx Daily Care Set" loading="lazy" />
+          <span class="badge badge--best">BEST</span>
+          <button class="icon-btn" aria-label="찜하기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </button>
+        </a>
+        <div class="card__body">
+          <h3 class="card__title">REVION rx Daily Care Set</h3>
+          <p class="card__sub">데일리 케어 세트로 한 번에 케어 가능</p>
+          <ul class="tags"><li>리쥬비네이팅</li><li>저자극</li><li>약국 단독 판매</li><li>재구매</li></ul>
+          <div class="card__divider"></div>
+          <div class="price">
+            <span class="price__discount">20%</span>
+            <span class="price__now">68,000원</span>
+            <span class="price__was">85,000원</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--sm">
+        <a class="card__media" href="product.html">
+          <img src="images/product-mask-2.webp" alt="REVION rx Night Care Set" loading="lazy" />
+          <button class="icon-btn" aria-label="찜하기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </button>
+        </a>
+        <div class="card__body">
+          <h3 class="card__title">REVION rx Night Care Set</h3>
+          <p class="card__sub">야간 집중 회복을 위한 마스크팩 + 크림 듀오</p>
+          <ul class="tags"><li>고보습</li><li>저자극</li><li>약국 단독 판매</li></ul>
+          <div class="card__divider"></div>
+          <div class="price">
+            <span class="price__discount">20%</span>
+            <span class="price__now">79,000원</span>
+            <span class="price__was">99,000원</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="card card--sm">
+        <a class="card__media" href="product.html">
+          <img src="images/product-suncream-2.webp" alt="REVION rx Sun Cream 3 Set" loading="lazy" />
+          <button class="icon-btn" aria-label="찜하기">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          </button>
+        </a>
+        <div class="card__body">
+          <h3 class="card__title">REVION rx Sun Cream 3 Set</h3>
+          <p class="card__sub">데일리 선크림 3개입 멀티팩, 가족과 함께 쓰기 좋은 구성</p>
+          <ul class="tags"><li>SPF50+</li><li>저자극</li><li>약국 단독 판매</li></ul>
+          <div class="card__divider"></div>
+          <div class="price">
+            <span class="price__discount">20%</span>
+            <span class="price__now">99,000원</span>
+            <span class="price__was">123,000원</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA banner -->
+<section class="cta">
+  <picture class="cta__media">
+    <img src="images/cta-banner.webp" alt="레비온 제품군 플랫레이" loading="lazy" />
+  </picture>
+  <div class="cta__overlay" aria-hidden="true"></div>
+  <div class="cta__content">
+    <h2 class="cta__title">피부는 채우는 것에서<br/>끝나지 않습니다.</h2>
+    <p class="cta__sub">깊게 채우고 오래 머물게 하는 것.<br/>REVION은 그 회복의 시간을 연구합니다.</p>
+    <a class="btn btn--ghost" href="about.html">브랜드 스토리 보기
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="section section--instagram" id="community">
+  <div class="container">
+    <header class="section__head section__head--center section__head--tight">
+      <p class="eyebrow eyebrow--ig">@revion_rx</p>
+      <h2 class="display">Instagram</h2>
+    </header>
+
+    <ul class="ig-grid">
+      <li><a href="#"><img src="images/ig-1.webp" alt="" loading="lazy" /></a></li>
+      <li><a href="#"><img src="images/ig-2.webp" alt="" loading="lazy" /></a></li>
+      <li><a href="#"><img src="images/ig-3.webp" alt="" loading="lazy" /></a></li>
+      <li><a href="#"><img src="images/ig-4.webp" alt="" loading="lazy" /></a></li>
+      <li><a href="#"><img src="images/ig-5.webp" alt="" loading="lazy" /></a></li>
+      <li><a href="#"><img src="images/ig-6.webp" alt="" loading="lazy" /></a></li>
+      <li><a href="#"><img src="images/ig-7.webp" alt="" loading="lazy" /></a></li>
+      <li><a href="#"><img src="images/ig-8.webp" alt="" loading="lazy" /></a></li>
+    </ul>
+  </div>
+</section>
+
+<div data-partial="footer"></div>
+
+<script src="partials.js"></script>
+<script>
+  /* Hero carousel — auto + arrow controls */
+  (function(){
+    const slides = document.querySelectorAll('.hero__slide');
+    const prev   = document.querySelector('.hero__arrow--prev');
+    const next   = document.querySelector('.hero__arrow--next');
+    const bars   = document.querySelectorAll('.hero__bar');
+    if (slides.length < 2) return;
+
+    let i = 0;
+    const N = slides.length, INTERVAL = 5000;
+    let timer;
+
+    const goTo = (n) => {
+      i = (n + N) % N;
+      slides.forEach((s, idx) => s.classList.toggle('is-active', idx === i));
+      bars.forEach((b, idx) => {
+        b.classList.remove('is-active');
+        void b.offsetWidth;
+        if (idx === i) b.classList.add('is-active');
+      });
+    };
+    const advance  = (d) => goTo(i + d);
+    const start = () => { stop(); timer = setInterval(() => advance(1), INTERVAL); };
+    const stop  = () => { if (timer) clearInterval(timer); };
+
+    prev?.addEventListener('click', () => { advance(-1); start(); });
+    next?.addEventListener('click', () => { advance(+1); start(); });
+    bars.forEach((b, idx) => b.addEventListener('click', () => { goTo(idx); start(); }));
+
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mouseenter', stop);
+    hero.addEventListener('mouseleave', start);
+
+    /* Swipe / drag */
+    const viewport = hero.querySelector('.hero__viewport') || hero;
+    const SWIPE_THRESHOLD = 50;
+    let startX = null, deltaX = 0, dragging = false;
+    const onStart = (x) => { startX = x; deltaX = 0; dragging = true; stop(); };
+    const onMove  = (x) => { if (!dragging || startX === null) return; deltaX = x - startX; };
+    const onEnd   = () => {
+      if (!dragging) return;
+      if (deltaX <= -SWIPE_THRESHOLD) advance(+1);
+      else if (deltaX >= SWIPE_THRESHOLD) advance(-1);
+      startX = null; deltaX = 0; dragging = false;
+      start();
+    };
+    viewport.addEventListener('touchstart', (e) => onStart(e.touches[0].clientX), { passive: true });
+    viewport.addEventListener('touchmove',  (e) => onMove(e.touches[0].clientX),  { passive: true });
+    viewport.addEventListener('touchend',   onEnd);
+    viewport.addEventListener('touchcancel', onEnd);
+    viewport.addEventListener('mousedown', (e) => { onStart(e.clientX); e.preventDefault(); });
+    window.addEventListener('mousemove',   (e) => onMove(e.clientX));
+    window.addEventListener('mouseup',     onEnd);
+
+    start();
+  })();
+</script>
+
+</body>
+</html>

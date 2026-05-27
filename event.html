@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>EVENT — REVION ℞</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div data-partial="announce"></div>
+<div data-partial="header" data-current="event"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-hero__title">진행 중인 이벤트</h1>
+    <p class="page-hero__sub">시즌 한정 프로모션과 신상 출시, 멤버십 혜택까지 한 곳에서 확인하세요.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: clamp(40px,5vw,72px);">
+  <div class="container">
+    <div class="event-hero">
+      <div>
+        <h2 class="event-hero__title">첫 구매 회원 10% 할인</h2>
+        <p class="event-hero__sub">신규 가입 후 7일 이내 · 전 상품 자동 할인</p>
+      </div>
+      <a href="shop.html" class="event-hero__cta">지금 쇼핑하기 <span aria-hidden="true">→</span></a>
+    </div>
+
+    <header class="section__head" style="margin-top: 56px;">
+      <p class="eyebrow">CURRENT EVENTS</p>
+      <h2 class="display">진행 중 · 6건</h2>
+    </header>
+
+    <div class="event-grid">
+      <article class="event-card">
+        <div class="event-card__media">
+          <img src="images/giftset-main.webp" alt="기프트 세트 할인" loading="lazy" />
+          <span class="event-card__badge">D-3</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__title">기프트 세트 20% 할인</h3>
+          <p class="event-card__meta"><span class="event-card__period">2026.05.10 — 2026.05.18</span><span>BEST</span></p>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-card__media">
+          <img src="images/product-suncream-1.webp" alt="선크림 신제품 런칭" loading="lazy" />
+          <span class="event-card__badge" style="background: var(--gold);">NEW</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__title">선크림 신제품 런칭 · 25% 할인</h3>
+          <p class="event-card__meta"><span class="event-card__period">2026.05.13 — 2026.05.31</span></p>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-card__media">
+          <img src="images/product-mask-2.webp" alt="리뷰 작성 마스크팩 증정" loading="lazy" />
+          <span class="event-card__badge" style="background: var(--ink);">REVIEW</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__title">리뷰 작성 시 마스크팩 1매 증정</h3>
+          <p class="event-card__meta"><span class="event-card__period">상시</span></p>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-card__media">
+          <img src="images/cta-banner.webp" alt="무료 배송 안내" loading="lazy" />
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__title">5만원 이상 무료 배송</h3>
+          <p class="event-card__meta"><span class="event-card__period">상시</span></p>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-card__media">
+          <img src="images/ig-5.webp" alt="스승의 날 기프트" loading="lazy" />
+          <span class="event-card__badge">D-12</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__title">스승의 날 기념 약사님 감사 기프트</h3>
+          <p class="event-card__meta"><span class="event-card__period">2026.05.10 — 2026.05.27</span></p>
+        </div>
+      </article>
+      <article class="event-card">
+        <div class="event-card__media event-card__media--ink">
+          <span class="event-card__badge" style="background: #fff; color: var(--ink);">SOON</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__title">정기 구독 멤버십 오픈</h3>
+          <p class="event-card__meta"><span class="event-card__period">2026.06.01 OPEN</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div data-partial="marquee"></div>
+<div data-partial="footer"></div>
+<script src="partials.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>COMMUNITY — REVION ℞</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div data-partial="announce"></div>
+<div data-partial="header" data-current="community"></div>
+
+<section class="page-hero page-hero--with-tabs">
+  <div class="container">
+    <h1 class="page-hero__title">함께 쓰고, 함께 회복합니다</h1>
+    <p class="page-hero__sub">레비온을 사용한 약사·고객의 진짜 후기와 궁금증을 만나보세요.</p>
+  </div>
+  <div class="container">
+    <nav class="tab-bar" aria-label="커뮤니티 탭" role="tablist">
+      <button type="button" data-tab="reviews" class="is-active" role="tab" aria-selected="true">리뷰 (1,284)</button>
+      <button type="button" data-tab="qa" role="tab" aria-selected="false">Q&amp;A (312)</button>
+      <button type="button" data-tab="media" role="tab" aria-selected="false">MEDIA</button>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <!-- REVIEWS PANEL -->
+    <div class="tab-panel is-active" id="panel-reviews" role="tabpanel">
+
+    <div class="review-tools">
+      <p style="font-size:13px; color:var(--ink-3);">총 <strong style="color:var(--ink); font-weight:700;">1,284</strong>개의 리뷰</p>
+      <button type="button" class="btn btn--primary" style="height:40px; padding: 0 18px;" onclick="window.openWriteReviewModal()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        리뷰 작성하기
+      </button>
+    </div>
+
+    <div class="review-grid" id="comm-review-grid">
+      <article class="review-card" data-rating="5" data-full="평소 수분크림을 바르면 따끔한 느낌이 있었는데, 레비온 크림은 첫날부터 자극이 전혀 없었어요. 1주일 사용 후 트러블 자국이 옅어진 게 보여요. 약사님 추천 받아 사길 잘했어요. 두 통째 사용 중인데 피부결도 한결 매끄러워졌고, 아침에 베이스 메이크업도 잘 먹어서 매일 사용하고 있습니다. 특히 환절기에 진정 효과가 좋아서 너무 만족스러워요. 다음에는 마스크팩도 같이 구매해보려 합니다.">
+        <div class="review-card__top">
+          <span class="review-card__rating">★★★★★</span>
+          <time class="review-card__date">2026.05.12</time>
+        </div>
+        <h3 class="review-card__title">민감 피부도 자극 없이 매일</h3>
+        <p class="review-card__text">평소 수분크림을 바르면 따끔한 느낌이 있었는데, 레비온 크림은 첫날부터 자극이 전혀 없었어요. 1주일 사용 후 트러블 자국이 옅어진 게 보여요. 약사님 추천 받아 사길 잘했어요.</p>
+        <div class="review-card__foot">
+          <span class="review-card__user">김**</span>
+          <span class="review-card__product">PDRN EGF Cream</span>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__top">
+          <span class="review-card__rating">★★★★★</span>
+          <time class="review-card__date">2026.05.10</time>
+        </div>
+        <h3 class="review-card__title">마스크팩 한 장이 앰플급</h3>
+        <p class="review-card__text">시트가 두껍고 에센스 함량이 정말 많아서 한 장 다 쓰는 데 30분 걸렸어요. 끝나고 보니 피부가 광 자체. 친구들한테도 추천하는 중입니다.</p>
+        <div class="review-card__foot">
+          <span class="review-card__user">박**</span>
+          <span class="review-card__product">PDRN EGF Mask</span>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__top">
+          <span class="review-card__rating">★★★★☆</span>
+          <time class="review-card__date">2026.05.08</time>
+        </div>
+        <h3 class="review-card__title">선크림 끈적임 적어서 매일 쓰기 좋아요</h3>
+        <p class="review-card__text">SPF50 선크림은 항상 답답한 느낌이었는데, 이건 가볍게 발리고 백탁 거의 없어요. 다만 향이 살짝 있는 편. 그래도 자극은 없고 발림성은 만점.</p>
+        <div class="review-card__foot">
+          <span class="review-card__user">이**</span>
+          <span class="review-card__product">PDRN EGF Sun Cream</span>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__top">
+          <span class="review-card__rating">★★★★★</span>
+          <time class="review-card__date">2026.05.06</time>
+        </div>
+        <h3 class="review-card__title">엄마 선물로 기프트 세트</h3>
+        <p class="review-card__text">친정엄마 생신 선물로 기프트 세트 구매. 박스 자체가 고급스러워서 별도 포장 안 해도 됐어요. 엄마가 너무 좋아하셔서 다음에 또 구매할 예정.</p>
+        <div class="review-card__foot">
+          <span class="review-card__user">최**</span>
+          <span class="review-card__product">Signature Gift Set</span>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__top">
+          <span class="review-card__rating">★★★★★</span>
+          <time class="review-card__date">2026.05.04</time>
+        </div>
+        <h3 class="review-card__title">데일리 케어 세트 가성비 최고</h3>
+        <p class="review-card__text">한 번에 다 쓸 수 있어서 좋고, 가격도 단품 대비 합리적. 여행 갈 때 그대로 들고 가서 잘 사용하고 있어요.</p>
+        <div class="review-card__foot">
+          <span class="review-card__user">정**</span>
+          <span class="review-card__product">Daily Care Set</span>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__top">
+          <span class="review-card__rating">★★★★☆</span>
+          <time class="review-card__date">2026.04.30</time>
+        </div>
+        <h3 class="review-card__title">민감 피부 약사가 직접 추천</h3>
+        <p class="review-card__text">제가 약사인데, 환자분들께도 자신있게 추천드립니다. 임상 데이터 신뢰감 있고 자극 정말 없어요. 진열대 1번 자리에 두고 있어요.</p>
+        <div class="review-card__foot">
+          <span class="review-card__user">한** 약사</span>
+          <span class="review-card__product">Night Care Set</span>
+        </div>
+      </article>
+    </div>
+    </div>
+    <!-- /REVIEWS PANEL -->
+
+    <!-- QA PANEL -->
+    <div class="tab-panel" id="panel-qa" role="tabpanel">
+    <div class="qa-list">
+      <article class="qa-item">
+        <button type="button" class="qa-item__head">
+          <span class="qa-status">답변대기</span>
+          <span class="qa-title">크림 유통기한이 어떻게 되나요?</span>
+          <span class="qa-meta">PDRN EGF Cream</span>
+          <span class="qa-meta">2026.05.14 · 김**</span>
+          <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="qa-item__body">
+          <p class="qa-item__pending">답변 준비 중입니다. 빠른 시일 내에 답변드리겠습니다.</p>
+        </div>
+      </article>
+      <article class="qa-item">
+        <button type="button" class="qa-item__head">
+          <span class="qa-status is-done">답변완료</span>
+          <span class="qa-title">임산부도 사용 가능한가요?</span>
+          <span class="qa-meta">PDRN EGF Mask</span>
+          <span class="qa-meta">2026.05.13 · 윤**</span>
+          <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="qa-item__body">
+          <div class="qa-item__row">
+            <span class="qa-item__label qa-item__label--a">A</span>
+            <div>
+              <p class="qa-item__text">레비온 마스크팩의 모든 성분은 임산부 사용 안전성 평가를 통과했습니다. 다만 개인의 피부 상태에 따라 이상 반응이 있을 수 있어, 사용 전 담당 산부인과 전문의와 상담해주시는 것을 권장드립니다.</p>
+              <p class="qa-item__answer-author">레비온 고객센터 · 2026.05.14</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="qa-item">
+        <button type="button" class="qa-item__head">
+          <span class="qa-status is-done">답변완료</span>
+          <span class="qa-title">선크림 백탁 정도가 궁금합니다</span>
+          <span class="qa-meta">PDRN EGF Sun</span>
+          <span class="qa-meta">2026.05.12 · 박**</span>
+          <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="qa-item__body">
+          <div class="qa-item__row">
+            <span class="qa-item__label qa-item__label--a">A</span>
+            <div>
+              <p class="qa-item__text">레비온 선크림은 화학자외선차단제 기반으로 백탁이 거의 없는 편입니다. 다만 두껍게 도포하실 경우 일시적으로 보일 수 있으니, 콩알 크기 정도로 얼굴 전체에 가볍게 펴 발라주시면 자연스럽게 마무리됩니다.</p>
+              <p class="qa-item__answer-author">레비온 고객센터 · 2026.05.13</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="qa-item">
+        <button type="button" class="qa-item__head">
+          <span class="qa-status is-done">답변완료</span>
+          <span class="qa-title">EGF 함량이 다른 브랜드와 비교해 어떤가요?</span>
+          <span class="qa-meta">전 상품 공통</span>
+          <span class="qa-meta">2026.05.10 · 이**</span>
+          <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="qa-item__body">
+          <div class="qa-item__row">
+            <span class="qa-item__label qa-item__label--a">A</span>
+            <div>
+              <p class="qa-item__text">레비온 전 라인의 EGF 함량은 2ppm으로, 시판 더마 코스메틱 평균(약 1ppm) 대비 2배 수준입니다. 또한 PDRN과 페어링되어 회복 효과가 한층 깊어집니다. 자세한 임상 데이터는 브랜드 스토리 페이지에서 확인하실 수 있습니다.</p>
+              <p class="qa-item__answer-author">레비온 고객센터 · 2026.05.11</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="qa-item">
+        <button type="button" class="qa-item__head">
+          <span class="qa-status is-done">답변완료</span>
+          <span class="qa-title">기프트 세트에 영수증 별도 첨부 가능한가요?</span>
+          <span class="qa-meta">Signature Gift Set</span>
+          <span class="qa-meta">2026.05.08 · 한**</span>
+          <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+        </button>
+        <div class="qa-item__body">
+          <div class="qa-item__row">
+            <span class="qa-item__label qa-item__label--a">A</span>
+            <div>
+              <p class="qa-item__text">선물용 구매 시 영수증은 박스에 동봉되지 않으며, 이메일로만 발송됩니다. 주문 시 '선물 포장' 옵션을 선택하시면 가격 표시 없이 정중하게 포장해 드립니다.</p>
+              <p class="qa-item__answer-author">레비온 고객센터 · 2026.05.09</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    </div>
+    <!-- /QA PANEL -->
+
+    <!-- MEDIA PANEL -->
+    <div class="tab-panel" id="panel-media" role="tabpanel">
+    <div class="media-filter" role="tablist" aria-label="미디어 필터">
+      <button type="button" class="media-chip is-active" data-filter="all">전체 <em>6</em></button>
+      <button type="button" class="media-chip" data-filter="press">언론보도 <em>2</em></button>
+      <button type="button" class="media-chip" data-filter="journal">저널 <em>2</em></button>
+      <button type="button" class="media-chip" data-filter="interview">인터뷰 <em>2</em></button>
+    </div>
+    <div class="media-grid">
+      <article class="media-card" data-type="press">
+        <a class="media-card__media" href="#"><img src="images/ig-8.webp" alt="" loading="lazy" /><span class="media-card__type" data-type="press">언론보도</span></a>
+        <div class="media-card__body">
+          <p class="media-card__source">코스인코리아닷컴</p>
+          <h3 class="media-card__title">"약사가 처방하는 더마 코스메틱" 레비온, 약국 단독 채널로 빠른 성장</h3>
+          <p class="media-card__excerpt">올해 상반기 전국 약국 1,200곳 입점을 달성한 레비온은 PDRN과 EGF 듀얼 부스팅 포뮬러로 민감 피부 시장을 공략하고 있다.</p>
+          <div class="media-card__meta">
+            <time>2026.05.10</time>
+            <a href="#">기사 보기 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="media-card" data-type="journal">
+        <a class="media-card__media" href="#"><img src="images/ig-1.webp" alt="" loading="lazy" /><span class="media-card__type" data-type="journal">저널</span></a>
+        <div class="media-card__body">
+          <p class="media-card__source">REVION JOURNAL</p>
+          <h3 class="media-card__title">PDRN 1,200ppm은 어떻게 측정될까 — 임상 데이터 공개</h3>
+          <p class="media-card__excerpt">레비온 R&D팀이 직접 공개하는 PDRN 함량 측정 방식과 임상 시험 결과. 99% 순도가 의미하는 것은 무엇인가.</p>
+          <div class="media-card__meta">
+            <time>2026.05.06</time>
+            <a href="#">자세히 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="media-card" data-type="interview">
+        <a class="media-card__media" href="#"><img src="images/ig-5.webp" alt="" loading="lazy" /><span class="media-card__type" data-type="interview">인터뷰</span></a>
+        <div class="media-card__body">
+          <p class="media-card__source">매일경제</p>
+          <h3 class="media-card__title">"약국이 곧 매장이자 상담 창구" — 레비온 김민준 대표 인터뷰</h3>
+          <p class="media-card__excerpt">약사 출신 창업자가 말하는 더마 코스메틱의 미래와 약국 채널이 가진 신뢰의 가치.</p>
+          <div class="media-card__meta">
+            <time>2026.04.28</time>
+            <a href="#">기사 보기 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="media-card" data-type="press">
+        <a class="media-card__media" href="#"><img src="images/cta-banner.webp" alt="" loading="lazy" /><span class="media-card__type" data-type="press">언론보도</span></a>
+        <div class="media-card__body">
+          <p class="media-card__source">중앙일보 헬스미디어</p>
+          <h3 class="media-card__title">민감성 피부 환자 10명 중 7명, 더마 코스메틱 약국 구매 선호</h3>
+          <p class="media-card__excerpt">최근 진행된 소비자 조사에서 민감성 피부 사용자의 약국 구매 선호 이유로 '약사 상담'과 '성분 신뢰'가 꼽혔다.</p>
+          <div class="media-card__meta">
+            <time>2026.04.20</time>
+            <a href="#">기사 보기 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="media-card" data-type="journal">
+        <a class="media-card__media" href="#"><img src="images/ig-3.webp" alt="" loading="lazy" /><span class="media-card__type" data-type="journal">저널</span></a>
+        <div class="media-card__body">
+          <p class="media-card__source">REVION JOURNAL</p>
+          <h3 class="media-card__title">EGF가 피부에 닿는 순간 — 회복 신호의 메커니즘</h3>
+          <p class="media-card__excerpt">표피 성장 인자가 어떻게 피부 자체 회복 시스템을 자극하는지, 단계별로 풀어보았습니다.</p>
+          <div class="media-card__meta">
+            <time>2026.04.15</time>
+            <a href="#">자세히 →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="media-card" data-type="interview">
+        <a class="media-card__media" href="#"><img src="images/ig-7.webp" alt="" loading="lazy" /><span class="media-card__type" data-type="interview">인터뷰</span></a>
+        <div class="media-card__body">
+          <p class="media-card__source">뷰티+ 매거진</p>
+          <h3 class="media-card__title">"성분이 신뢰가 되는 시대" — 레비온 R&D 총괄 인터뷰</h3>
+          <p class="media-card__excerpt">PDRN 1,200ppm은 어떻게 만들어지는가. 레비온 R&D 총괄이 직접 풀어주는 포뮬러 설계 이야기.</p>
+          <div class="media-card__meta">
+            <time>2026.04.02</time>
+            <a href="#">기사 보기 →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+    </div>
+    <!-- /MEDIA PANEL -->
+  </div>
+</section>
+
+<div data-partial="marquee"></div>
+<div data-partial="footer"></div>
+<script src="partials.js"></script>
+<script>
+  /* Tab switching */
+  const tabs   = document.querySelectorAll('.tab-bar [data-tab]');
+  const panels = document.querySelectorAll('.tab-panel');
+  const setTab = (key) => {
+    tabs.forEach(t => {
+      const active = t.dataset.tab === key;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', active);
+    });
+    panels.forEach(p => p.classList.toggle('is-active', p.id === `panel-${key}`));
+    history.replaceState(null, '', `#${key}`);
+  };
+  tabs.forEach(t => t.addEventListener('click', () => setTab(t.dataset.tab)));
+  /* Open via hash */
+  const hash = location.hash.slice(1);
+  if (['reviews','qa','media'].includes(hash)) setTab(hash);
+
+  /* Q&A toggle (same as PDP) */
+  document.querySelectorAll('.qa-item__head').forEach(btn =>
+    btn.addEventListener('click', () => btn.parentElement.classList.toggle('is-open'))
+  );
+
+  /* Media filter chips */
+  document.querySelectorAll('.media-chip').forEach(chip =>
+    chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      document.querySelectorAll('.media-chip').forEach(c => c.classList.toggle('is-active', c === chip));
+      document.querySelectorAll('.media-card').forEach(card =>
+        card.toggleAttribute('hidden', !(f === 'all' || card.dataset.type === f))
+      );
+    })
+  );
+
+  /* Review card click → open detail modal with prev/next */
+  const reviewCards = Array.from(document.querySelectorAll('#comm-review-grid .review-card'));
+  const reviewItems = reviewCards.map(card => {
+    const stars = card.querySelector('.review-card__rating')?.textContent.trim() || '';
+    return {
+      rating:  parseInt(card.dataset.rating || ((stars.match(/★/g) || []).length || 5), 10),
+      date:    card.querySelector('.review-card__date')?.textContent.trim() || '',
+      title:   card.querySelector('.review-card__title')?.textContent.trim() || '',
+      text:    card.dataset.full || card.querySelector('.review-card__text')?.textContent.trim() || '',
+      user:    card.querySelector('.review-card__user')?.textContent.trim() || '',
+      product: card.querySelector('.review-card__product')?.textContent.trim() || '',
+    };
+  });
+  reviewCards.forEach((card, idx) => {
+    card.addEventListener('click', () => window.openReviewModal(reviewItems[idx], reviewItems, idx));
+  });
+</script>
+</body>
+</html>

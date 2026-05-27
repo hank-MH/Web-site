@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>SHOP — REVION ℞</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div data-partial="announce"></div>
+<div data-partial="header" data-current="shop"></div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-hero__title">전체 상품</h1>
+    <p class="page-hero__sub">약사가 처방하는 더마 코스메틱, 매일 안심하고 쓰는 회복 루틴.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top: clamp(40px,5vw,72px);">
+  <div class="container">
+    <div class="shop-layout">
+      <button type="button" class="shop-filter-toggle" id="filter-toggle" aria-expanded="false">필터 보기</button>
+      <aside class="shop-filter" id="shop-filter">
+        <section>
+          <h3>카테고리</h3>
+          <ul>
+            <li><span>전체</span><em>12</em></li>
+            <li><span>크림</span><em>4</em></li>
+            <li><span>마스크팩</span><em>3</em></li>
+            <li><span>선크림</span><em>2</em></li>
+            <li><span>기프트 세트</span><em>3</em></li>
+          </ul>
+        </section>
+        <section>
+          <h3>피부 고민</h3>
+          <ul>
+            <li><span>저자극·민감</span><em>8</em></li>
+            <li><span>탄력·리쥬비네이팅</span><em>5</em></li>
+            <li><span>고보습</span><em>6</em></li>
+            <li><span>UV 차단</span><em>2</em></li>
+          </ul>
+        </section>
+        <section>
+          <h3>가격</h3>
+          <ul>
+            <li><span>3만원 이하</span><em>2</em></li>
+            <li><span>3만~6만원</span><em>5</em></li>
+            <li><span>6만~10만원</span><em>3</em></li>
+            <li><span>10만원 이상</span><em>2</em></li>
+          </ul>
+        </section>
+      </aside>
+
+      <div class="shop-results">
+        <div class="shop-toolbar">
+          <p class="count">전체 <strong style="color:var(--ink);font-weight:700;">12</strong>개의 상품</p>
+          <select aria-label="정렬">
+            <option>추천순</option>
+            <option>판매순</option>
+            <option>최신순</option>
+            <option>낮은 가격순</option>
+            <option>높은 가격순</option>
+          </select>
+        </div>
+
+        <div class="product-grid product-grid--4">
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/product-cream-1.webp" alt="" loading="lazy" /><video class="card__hover-video" src="media/cream-hover.mp4" muted loop playsinline preload="metadata" aria-hidden="true"></video><span class="badge badge--best">BEST</span></a>
+            <div class="card__body">
+              <h3 class="card__title">PDRN EGF Origin Rejuvenating Cream</h3>
+              <p class="card__sub">EGF와 PDRN을 한 번에 담은 회복 크림</p>
+              <ul class="tags"><li>리쥬비네이팅</li><li>저자극</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">20%</span><span class="price__now">45,000원</span><span class="price__was">56,000원</span></div>
+            </div>
+          </article>
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/product-cream-2.webp" alt="" loading="lazy" /><img class="card__hover-image" src="images/mask-texture.png" alt="" loading="lazy" /></a>
+            <div class="card__body">
+              <h3 class="card__title">PDRN EGF Origin Rejuvenating Mask</h3>
+              <p class="card__sub">5겹 코튼 시트의 고보습 마스크팩</p>
+              <ul class="tags"><li>고보습</li><li>저자극</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">20%</span><span class="price__now">45,000원</span><span class="price__was">56,000원</span></div>
+            </div>
+          </article>
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/product-mask-1.webp" alt="" loading="lazy" /><img class="card__hover-image" src="images/suncream-texture.png" alt="" loading="lazy" /><span class="badge badge--new">NEW</span></a>
+            <div class="card__body">
+              <h3 class="card__title">PDRN EGF Origin Sun Cream</h3>
+              <p class="card__sub">SPF50+ 데일리 선크림</p>
+              <ul class="tags"><li>SPF50+</li><li>저자극</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">20%</span><span class="price__now">45,000원</span><span class="price__was">56,000원</span></div>
+            </div>
+          </article>
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/giftset-main.webp" alt="" loading="lazy" /><span class="badge badge--gift">GIFT</span></a>
+            <div class="card__body">
+              <h3 class="card__title">REVION rx Signature Gift Set</h3>
+              <p class="card__sub">3종 기프트 세트, 쇼핑백 증정</p>
+              <ul class="tags"><li>BEST</li><li>저자극</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">20%</span><span class="price__now">112,000원</span><span class="price__was">140,000원</span></div>
+            </div>
+          </article>
+
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/product-suncream-1.webp" alt="" loading="lazy" /><span class="badge badge--best">BEST</span></a>
+            <div class="card__body">
+              <h3 class="card__title">REVION rx Daily Care Set</h3>
+              <p class="card__sub">데일리 케어 듀오 세트</p>
+              <ul class="tags"><li>리쥬비네이팅</li><li>저자극</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">20%</span><span class="price__now">68,000원</span><span class="price__was">85,000원</span></div>
+            </div>
+          </article>
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/product-mask-2.webp" alt="" loading="lazy" /></a>
+            <div class="card__body">
+              <h3 class="card__title">REVION rx Night Care Set</h3>
+              <p class="card__sub">야간 회복 마스크팩+크림 듀오</p>
+              <ul class="tags"><li>고보습</li><li>저자극</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">20%</span><span class="price__now">79,000원</span><span class="price__was">99,000원</span></div>
+            </div>
+          </article>
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/product-suncream-2.webp" alt="" loading="lazy" /></a>
+            <div class="card__body">
+              <h3 class="card__title">REVION rx Sun Cream 3 Set</h3>
+              <p class="card__sub">데일리 선크림 3개입 멀티팩</p>
+              <ul class="tags"><li>SPF50+</li><li>저자극</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">20%</span><span class="price__now">99,000원</span><span class="price__was">123,000원</span></div>
+            </div>
+          </article>
+          <article class="card card--sm">
+            <a class="card__media" href="product.html"><img src="images/ig-7.webp" alt="" loading="lazy" /><span class="badge badge--new">NEW</span></a>
+            <div class="card__body">
+              <h3 class="card__title">REVION rx Travel Pouch Set</h3>
+              <p class="card__sub">여행용 미니 사이즈 4종 + 파우치 증정</p>
+              <ul class="tags"><li>저자극</li><li>한정수량</li></ul>
+              <div class="card__divider"></div>
+              <div class="price"><span class="price__discount">15%</span><span class="price__now">39,000원</span><span class="price__was">46,000원</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div data-partial="marquee"></div>
+<div data-partial="footer"></div>
+<script src="partials.js"></script>
+<script>
+  const btn = document.getElementById('filter-toggle');
+  const filter = document.getElementById('shop-filter');
+  btn?.addEventListener('click', () => {
+    const open = filter.classList.toggle('is-open');
+    btn.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open);
+    btn.textContent = open ? '필터 닫기' : '필터 보기';
+    btn.appendChild(document.createTextNode(''));
+  });
+</script>
+</body>
+</html>
