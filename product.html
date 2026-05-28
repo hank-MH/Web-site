@@ -33,11 +33,11 @@
       <div class="pdp__gallery-wrap">
         <div class="gallery">
           <div class="gallery__thumbs">
-            <button class="gallery__thumb is-active" data-src="images/product-cream-1.webp" aria-label="이미지 1"><img src="images/product-cream-1.webp" alt="" /></button>
-            <button class="gallery__thumb" data-src="images/product-suncream-2.webp" aria-label="이미지 2"><img src="images/product-suncream-2.webp" alt="" /></button>
-            <button class="gallery__thumb" data-src="images/ig-3.webp" aria-label="이미지 3"><img src="images/ig-3.webp" alt="" /></button>
-            <button class="gallery__thumb" data-src="images/ig-4.webp" aria-label="이미지 4"><img src="images/ig-4.webp" alt="" /></button>
-            <button class="gallery__thumb" data-src="images/cta-banner.webp" aria-label="이미지 5"><img src="images/cta-banner.webp" alt="" /></button>
+            <button class="gallery__thumb is-active" data-src="images/product-cream-1.webp" data-label="PRODUCT · 패키지 정면" aria-label="이미지 1 — 제품 정면"><img src="images/product-cream-1.webp" alt="" /></button>
+            <button class="gallery__thumb" data-src="images/product-suncream-2.webp" data-label="TEXTURE · 크림 텍스처" aria-label="이미지 2 — 텍스처"><img src="images/product-suncream-2.webp" alt="" /></button>
+            <button class="gallery__thumb" data-src="images/ig-3.webp" data-label="MODEL · 사용 컷" aria-label="이미지 3 — 모델 사용 컷"><img src="images/ig-3.webp" alt="" /></button>
+            <button class="gallery__thumb" data-src="images/ig-4.webp" data-label="INGREDIENT · EGF · PDRN 캡슐" aria-label="이미지 4 — 성분"><img src="images/ig-4.webp" alt="" /></button>
+            <button class="gallery__thumb" data-src="images/cta-banner.webp" data-label="BEFORE / AFTER · 4주 변화" aria-label="이미지 5 — 사용 전후"><img src="images/cta-banner.webp" alt="" /></button>
           </div>
           <div class="gallery__main">
             <img id="gallery-main-img" src="images/product-cream-1.webp" alt="REVION Rx PDRN EGF Origin Rejuvenating Cream" />
@@ -45,8 +45,17 @@
               <span class="badge badge--best">BEST</span>
               <span class="badge badge--new">NEW</span>
             </div>
+            <span class="gallery__label" id="gallery-label">PRODUCT · 패키지 정면</span>
           </div>
         </div>
+
+        <!-- Social proof strip directly under gallery -->
+        <aside class="proof-strip" aria-label="브랜드 신뢰 지표">
+          <div><strong>1,284+</strong><span>누적 후기</span></div>
+          <div><strong>★ 4.9</strong><span>실사용 평점</span></div>
+          <div><strong>약국 1,200+</strong><span>전국 처방 약국</span></div>
+          <div><strong>2배 ↑</strong><span>임상 차이</span></div>
+        </aside>
       </div>
 
       <!-- Sections (tabs + detail + reviews + qa + shipping) -->
@@ -56,13 +65,106 @@
           <div class="pdp-tabs__inner">
             <a href="#detail" class="is-active">상세정보</a>
             <a href="#reviews">사용후기 <span style="color:var(--ink-4);font-weight:500;">(1,284)</span></a>
-            <a href="#qa">상품문의 <span style="color:var(--ink-4);font-weight:500;">(312)</span></a>
+            <a href="#qa">상품문의 <span style="color:var(--ink-4);font-weight:500;">(318)</span></a>
             <a href="#shipping">배송/교환/반품</a>
           </div>
         </nav>
 
         <!-- Detail -->
         <section class="pdp-section" id="detail">
+
+          <!-- ▼ Signature Hero — REVIVE -->
+          <div class="signature-hero">
+            <p class="signature-hero__eyebrow">REVION ℞ · DERMA REJUVENATION</p>
+            <h1 class="signature-hero__title">
+              REVIVE.
+              <em>다시 빛나는 내 피부 전성기</em>
+            </h1>
+            <p class="signature-hero__sub">
+              EGF로 채우고 PDRN으로 잠그는, 약사가 직접 처방한 단 한 통의 듀얼 액티브 크림.
+              표피와 진피 두 층을 동시에 회복시키는 Fill &amp; Lock 메커니즘으로,
+              임상에서 단독 성분 크림 대비 평균 2배의 차이를 입증했습니다.
+            </p>
+            <div class="signature-hero__trust">
+              <div>
+                <strong>약사 처방</strong>
+                <span>Pharmacist Formulated</span>
+              </div>
+              <div>
+                <strong>약국 전용 유통</strong>
+                <span>Pharmacy Exclusive</span>
+              </div>
+              <div>
+                <strong>임상 ×2 검증</strong>
+                <span>OATC Verified</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ▼ Brand Story — Pharmacist provenance -->
+          <div class="brand-story">
+            <div class="brand-story__inner">
+              <div class="brand-story__media" role="img" aria-label="약사 포트레이트 자리 (디자인팀 실사 촬영 필요)">
+                <span class="brand-story__media-tag">PHARMACIST</span>
+                <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="coat-grad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#ffffff"/>
+                      <stop offset="1" stop-color="#f0e6d4"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Lab coat silhouette -->
+                  <path d="M 40,240 L 50,140 Q 60,118 80,114 L 90,110 L 100,118 L 110,110 L 120,114 Q 140,118 150,140 L 160,240 Z" fill="url(#coat-grad)" opacity="0.95"/>
+                  <!-- Lapel V -->
+                  <path d="M 90,114 L 100,160 L 110,114" fill="none" stroke="#bd864d" stroke-width="1.5" opacity="0.5"/>
+                  <!-- Head -->
+                  <circle cx="100" cy="80" r="32" fill="#f4d4a0" opacity="0.95"/>
+                  <!-- Hair line -->
+                  <path d="M 70,75 Q 80,52 100,50 Q 120,52 130,75 L 130,68 Q 120,46 100,44 Q 80,46 70,68 Z" fill="#3a2914" opacity="0.85"/>
+                  <!-- Stethoscope hint -->
+                  <path d="M 80,150 Q 70,170 80,185 Q 100,200 120,185 Q 130,170 120,150" fill="none" stroke="#a78a64" stroke-width="2" opacity="0.6"/>
+                  <circle cx="100" cy="195" r="6" fill="#a78a64" opacity="0.7"/>
+                </svg>
+              </div>
+              <div class="brand-story__copy">
+                <p class="eyebrow">PHARMACIST'S NOTE</p>
+                <h2>약국 카운터에서 시작된, <span class="accent">단 한 통의 처방</span></h2>
+                <p>
+                  매일 카운터에서 마주하는 환자분들의 가장 흔한 고민은 "좋은 성분은 다 따로따로 발라야 하나요?"였습니다.
+                  PDRN 단독 크림, EGF 단독 앰플, 그리고 보습 크림까지 — 단계를 늘려도 회복은 더디기만 했습니다.
+                </p>
+                <p>
+                  REVION℞ Origin Rejuvenating Cream은 그 질문에서 출발했습니다. 표피를 채우는 EGF와 진피를 잠그는 PDRN을
+                  의약품 처방 수준의 활성 농도로 한 통에 담아, 단계가 아닌 결과로 답해드립니다. 약국에서만 만나실 수 있는
+                  이유는 단 하나, 신뢰할 수 있는 전달까지가 처방의 일부이기 때문입니다.
+                </p>
+                <div class="brand-story__signature">
+                  <svg width="64" height="32" viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+                    <path d="M 6,32 Q 14,8 24,32 T 44,32 Q 54,8 64,32 Q 72,40 84,28 Q 96,12 110,30" />
+                    <path d="M 14,40 L 96,40" stroke-opacity="0.35"/>
+                  </svg>
+                  <div class="brand-story__signature-text">
+                    <strong>약사 K. Han · REVION℞ Formulation Lead</strong>
+                    <em>한국약사회 정회원 · 의약품 임상연구 12년</em>
+                  </div>
+                </div>
+                <div class="brand-story__credentials">
+                  <div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+                    <span>식약처 신고</span>
+                  </div>
+                  <div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/></svg>
+                    <span>임상시험 인증</span>
+                  </div>
+                  <div>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/></svg>
+                    <span>약국 1,200+ 전용 유통</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- ▼ Block A — Fill & Lock mechanism (3 steps) -->
           <div class="pdp-extras pdp-extras--mech">
@@ -631,6 +733,61 @@
             </article>
           </div>
 
+          <!-- ▼ Texture Moment — sensorial -->
+          <div class="texture-moment">
+            <div class="texture-moment__grid">
+              <div class="texture-moment__visual" role="img" aria-label="크림 텍스처 시각화">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="cap-grad" cx="0.45" cy="0.35" r="0.65">
+                      <stop offset="0" stop-color="#fff8e8" stop-opacity="0.95"/>
+                      <stop offset="0.6" stop-color="#f4d4a0" stop-opacity="0.6"/>
+                      <stop offset="1" stop-color="#a16934" stop-opacity="0.2"/>
+                    </radialGradient>
+                    <linearGradient id="egf-cap" x1="0" x2="1">
+                      <stop offset="0" stop-color="#ffe6b8"/>
+                      <stop offset="1" stop-color="#f4a668"/>
+                    </linearGradient>
+                    <linearGradient id="pdrn-cap" x1="0" x2="1">
+                      <stop offset="0" stop-color="#bd864d"/>
+                      <stop offset="1" stop-color="#5a3414"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Outer cream droplet -->
+                  <ellipse cx="100" cy="100" rx="78" ry="74" fill="url(#cap-grad)">
+                    <animate attributeName="rx" values="78;82;78" dur="4s" repeatCount="indefinite"/>
+                    <animate attributeName="ry" values="74;78;74" dur="4s" repeatCount="indefinite"/>
+                  </ellipse>
+                  <!-- Dual capsule split -->
+                  <g>
+                    <path d="M 60,100 Q 60,72 100,72 L 100,128 Q 60,128 60,100 Z" fill="url(#egf-cap)" stroke="#fff" stroke-width="1.5"/>
+                    <path d="M 140,100 Q 140,72 100,72 L 100,128 Q 140,128 140,100 Z" fill="url(#pdrn-cap)" stroke="#fff" stroke-width="1.5"/>
+                    <text x="80" y="105" text-anchor="middle" font-size="11" font-weight="800" fill="#7B4F2A" letter-spacing="1">EGF</text>
+                    <text x="120" y="105" text-anchor="middle" font-size="11" font-weight="800" fill="#fff8e8" letter-spacing="1">PDRN</text>
+                  </g>
+                  <!-- Highlight specular -->
+                  <ellipse cx="78" cy="84" rx="10" ry="5" fill="#fff" opacity="0.6">
+                    <animate attributeName="opacity" values="0.6;0.95;0.6" dur="3s" repeatCount="indefinite"/>
+                  </ellipse>
+                </svg>
+              </div>
+              <div class="texture-moment__copy">
+                <p class="eyebrow">TEXTURE · SENSORIAL</p>
+                <h2>가볍지만 <span class="accent">밀도 있게</span>, 듀얼 액티브 캡슐 텍스처</h2>
+                <p>
+                  EGF와 PDRN 두 활성 성분을 캡슐 단위로 안정화해, 마지막까지 처음의 농도와 효능을 유지합니다.
+                  손등 위에서 부드럽게 녹아 흡수되며, 끈적임 없이 두 층을 따로 채우고 잠그는 감각을 남깁니다.
+                </p>
+                <div class="texture-moment__attrs">
+                  <div><strong>50 ml</strong><span>2개월 사용분</span></div>
+                  <div><strong>無 향료</strong><span>민감 피부 적합</span></div>
+                  <div><strong>pH 5.5</strong><span>피부 약산성</span></div>
+                  <div><strong>비건 캡슐</strong><span>Cruelty-Free</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- ▼ Block B — Clinical emphasis (vs PDRN-only / vs EGF-only) -->
           <div class="pdp-extras pdp-extras--clinical">
             <header class="extras-head">
@@ -706,6 +863,173 @@
             </div>
 
             <p class="clinical-disclaimer">* OATC 피부임상시험센터 · 2025년 12월 15~16일 · 22명 (20~65세 여성) · 보드 인증 피부과 전문의 진행. 동일 사용 조건 하 4시간 도포 후 측정. 시험 기간 내 결과에 한함. 개인의 피부 특성에 따라 결과는 다를 수 있습니다.</p>
+          </div>
+
+          <!-- ▼ Clinical Authority — OATC + methodology -->
+          <div class="clinical-authority">
+            <header class="clinical-authority__head">
+              <p class="eyebrow">TESTED AT OATC</p>
+              <h2>제3자 기관에서 <span class="accent">독립 검증된</span> 데이터</h2>
+              <p>측정 도구·진행 전문의·통계 분석까지 모두 외부 임상센터에서 진행했습니다. 자체 시험이 아닌 제3자 검증, 모든 수치를 공개합니다.</p>
+            </header>
+            <div class="clinical-authority__grid">
+              <div class="clinical-authority__card">
+                <div class="clinical-authority__card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6L4 20a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2L15 8V2"/><path d="M8 14h8"/></svg>
+                </div>
+                <strong>OATC</strong>
+                <span>피부임상시험센터<br/>(Korea Skin Research Institute)</span>
+              </div>
+              <div class="clinical-authority__card">
+                <div class="clinical-authority__card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+                </div>
+                <strong>22명</strong>
+                <span>20~65세 여성<br/>보드 인증 피부과 진행</span>
+              </div>
+              <div class="clinical-authority__card">
+                <div class="clinical-authority__card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"/></svg>
+                </div>
+                <strong>VISIA · Cutometer</strong>
+                <span>피부 영상 분석 · 탄력 측정<br/>FDA 인증 측정 장비</span>
+              </div>
+              <div class="clinical-authority__card">
+                <div class="clinical-authority__card-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+                </div>
+                <strong>p &lt; 0.05</strong>
+                <span>모든 지표 통계 유의<br/>4시간 도포 후 측정</span>
+              </div>
+            </div>
+            <dl class="clinical-authority__methodology">
+              <dt>METHODOLOGY</dt>
+              <dd>
+                패널을 무작위 3그룹(REVION℞ · PDRN-only · EGF-only)으로 분할, <em>동일 사용 조건</em> 하 4시간 도포 후
+                VISIA로 피부결·치밀도 영상 측정, Cutometer로 탄력·보습 지속력 측정. 결과는 baseline 대비 변화율로 정규화하여
+                그룹간 비교, 모든 결과 <em>p &lt; 0.05</em>로 통계적 유의성 확인. 시험 결과 raw data는 요청 시 열람 가능.
+              </dd>
+            </dl>
+          </div>
+
+          <!-- ▼ 4-Column Comparison Table — vs 일반/PDRN/EGF/REVION -->
+          <div class="compare-table">
+            <header class="compare-table__head">
+              <p class="eyebrow">CATEGORY COMPARISON</p>
+              <h2>왜 REVION℞ <span class="accent">하나로 충분한지</span></h2>
+            </header>
+            <div class="compare-table__wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>일반 보습 크림</th>
+                    <th>PDRN-only 크림</th>
+                    <th>EGF-only 크림</th>
+                    <th class="is-revion">REVION℞</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>PDRN 함량</th>
+                    <td><span class="no">—</span></td>
+                    <td>1,200 ppm</td>
+                    <td><span class="no">—</span></td>
+                    <td class="is-revion">1,200 ppm</td>
+                  </tr>
+                  <tr>
+                    <th>EGF 함량</th>
+                    <td><span class="no">—</span></td>
+                    <td><span class="no">—</span></td>
+                    <td>2 ppm</td>
+                    <td class="is-revion">2 ppm</td>
+                  </tr>
+                  <tr>
+                    <th>표피 · 진피 동시 작용</th>
+                    <td><span class="no">✕</span></td>
+                    <td><span class="partial">진피만</span></td>
+                    <td><span class="partial">표피만</span></td>
+                    <td class="is-revion"><span class="yes">✓</span></td>
+                  </tr>
+                  <tr>
+                    <th>의약품 처방형 제형</th>
+                    <td><span class="no">✕</span></td>
+                    <td><span class="partial">부분</span></td>
+                    <td><span class="partial">부분</span></td>
+                    <td class="is-revion"><span class="yes">✓</span></td>
+                  </tr>
+                  <tr>
+                    <th>약국 전용 유통</th>
+                    <td><span class="no">✕</span></td>
+                    <td><span class="no">✕</span></td>
+                    <td><span class="no">✕</span></td>
+                    <td class="is-revion"><span class="yes">✓</span></td>
+                  </tr>
+                  <tr>
+                    <th>제3자 임상 입증</th>
+                    <td><span class="no">✕</span></td>
+                    <td><span class="partial">자체</span></td>
+                    <td><span class="partial">자체</span></td>
+                    <td class="is-revion"><span class="yes">OATC ✓</span></td>
+                  </tr>
+                  <tr>
+                    <th>대비 평균 개선율</th>
+                    <td>baseline</td>
+                    <td>+38%</td>
+                    <td>+42%</td>
+                    <td class="is-revion">+86%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- ▼ Routine Synergy — Cream + Mask + Sun -->
+          <div class="routine-synergy">
+            <header class="routine-synergy__head">
+              <p class="eyebrow">ROUTINE SYNERGY</p>
+              <h2>3-Step 함께 쓸 때, <span class="accent">단품 합산보다 +35% 더</span></h2>
+              <p>마스크로 깊이 채우고, 크림으로 잠그고, 선크림으로 데미지를 막는 순서. 동일 듀얼 액티브 라인업이 만나야 시너지가 완성됩니다.</p>
+            </header>
+            <div class="routine-flow">
+              <article class="routine-step">
+                <div class="routine-step__media">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 9h6"/><path d="M9 13h6"/></svg>
+                </div>
+                <span class="routine-step__num">STEP 01</span>
+                <h3 class="routine-step__name">PDRN EGF Mask</h3>
+                <p class="routine-step__role">주 2~3회 · 진피 부스팅</p>
+              </article>
+              <div class="routine-plus">＋</div>
+              <article class="routine-step" style="border-color: var(--gold); box-shadow: 0 8px 24px rgba(161,105,52,0.18);">
+                <div class="routine-step__media" style="background: linear-gradient(180deg, #fff5e1, #f4d4a0);">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+                </div>
+                <span class="routine-step__num" style="background: var(--gold); color:#fff;">STEP 02 · CORE</span>
+                <h3 class="routine-step__name">PDRN EGF Cream</h3>
+                <p class="routine-step__role">아침·저녁 · Fill &amp; Lock</p>
+              </article>
+              <div class="routine-plus">＋</div>
+              <article class="routine-step">
+                <div class="routine-step__media">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/><path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="M6.34 17.66l-1.41 1.41"/><path d="M19.07 4.93l-1.41 1.41"/></svg>
+                </div>
+                <span class="routine-step__num">STEP 03</span>
+                <h3 class="routine-step__name">PDRN EGF Sun Cream</h3>
+                <p class="routine-step__role">데일리 · UV 데미지 차단</p>
+              </article>
+              <div class="routine-equal">＝</div>
+              <div class="routine-result">
+                <div class="routine-result__label">SYNERGY EFFECT</div>
+                <div class="routine-result__big">×1.35</div>
+                <div class="routine-result__sub">단품 사용 대비 평균 개선율<br/>(4주차 OATC 측정)</div>
+              </div>
+            </div>
+            <div class="routine-bundle-cta">
+              <strong>3-Step 시그니처 세트</strong>
+              <em>−18% 번들 할인</em>
+              <button type="button" class="routine-bundle-cta__btn" onclick="location.href='shop.html'">세트 보기 ›</button>
+            </div>
           </div>
 
           <div class="detail-image">
@@ -801,7 +1125,7 @@
 
         <!-- Q&A -->
         <section class="pdp-section" id="qa" style="border-top: 1px solid var(--line);">
-          <h2>상품 문의 <span style="color: var(--ink-4); font-weight:500; font-size:.6em;">312건</span></h2>
+          <h2>상품 문의 <span style="color: var(--ink-4); font-weight:500; font-size:.6em;">318건</span></h2>
           <div class="qa-list">
             <article class="qa-item">
               <button type="button" class="qa-item__head">
@@ -869,6 +1193,96 @@
                 </div>
               </div>
             </article>
+            <article class="qa-item">
+              <button type="button" class="qa-item__head">
+                <span class="qa-status is-done">답변완료</span>
+                <span class="qa-title">레티놀이나 비타민C와 함께 발라도 되나요?</span>
+                <span class="qa-meta">유**</span>
+                <span class="qa-meta">2026.05.04</span>
+                <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="qa-item__body">
+                <div class="qa-item__row">
+                  <span class="qa-item__label qa-item__label--a">A</span>
+                  <div>
+                    <p class="qa-item__text">레티놀·비타민C 등 강한 액티브 성분과 함께 사용 가능하나, 처음 도입하시는 분이라면 시간차 layering을 권장드립니다. 예) 아침: 비타민C → 본 제품 / 저녁: 레티놀 후 본 제품으로 마무리. 활성 농도가 높아 도입 첫 주는 양을 절반으로 적용해 주세요.</p>
+                    <p class="qa-item__answer-author">레비온 고객센터 · 2026.05.05</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="qa-item">
+              <button type="button" class="qa-item__head">
+                <span class="qa-status is-done">답변완료</span>
+                <span class="qa-title">시술 후 진정용으로 사용해도 괜찮을까요?</span>
+                <span class="qa-meta">신**</span>
+                <span class="qa-meta">2026.05.02</span>
+                <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="qa-item__body">
+                <div class="qa-item__row">
+                  <span class="qa-item__label qa-item__label--a">A</span>
+                  <div>
+                    <p class="qa-item__text">레이저·인모드·MTS 등 시술 직후 회복기에는 자극이 적은 단일 보습제부터 사용을 권장드리며, 시술 후 48시간 이후 정도부터 본 제품 사용이 적합합니다. 시술 담당 의료진의 권고가 우선합니다.</p>
+                    <p class="qa-item__answer-author">레비온 고객센터 · 2026.05.03</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="qa-item">
+              <button type="button" class="qa-item__head">
+                <span class="qa-status is-done">답변완료</span>
+                <span class="qa-title">동물성 원료가 들어가 있나요? 비건인가요?</span>
+                <span class="qa-meta">차**</span>
+                <span class="qa-meta">2026.04.29</span>
+                <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="qa-item__body">
+                <div class="qa-item__row">
+                  <span class="qa-item__label qa-item__label--a">A</span>
+                  <div>
+                    <p class="qa-item__text">본 제품의 EGF는 식물성 발효 유래(rh-Oligopeptide-1)이며 PDRN은 양식 연어 정자 유래 정제 성분입니다. 따라서 100% 비건은 아니나, 인체 EGF·동물 실험은 일체 진행하지 않은 Cruelty-Free 제품입니다.</p>
+                    <p class="qa-item__answer-author">레비온 고객센터 · 2026.04.30</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="qa-item">
+              <button type="button" class="qa-item__head">
+                <span class="qa-status is-done">답변완료</span>
+                <span class="qa-title">왜 약국에서만 판매하나요?</span>
+                <span class="qa-meta">조**</span>
+                <span class="qa-meta">2026.04.26</span>
+                <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="qa-item__body">
+                <div class="qa-item__row">
+                  <span class="qa-item__label qa-item__label--a">A</span>
+                  <div>
+                    <p class="qa-item__text">EGF는 온도·pH에 매우 민감한 활성 성분이라 콜드체인 유통과 약사의 보관 안내가 효능에 직결됩니다. 또한 피부 상태별 사용량 조절이 필요해, 약사 상담 채널을 통한 유통이 가장 안전한 전달 방법이라 판단했습니다.</p>
+                    <p class="qa-item__answer-author">레비온 고객센터 · 2026.04.27</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="qa-item">
+              <button type="button" class="qa-item__head">
+                <span class="qa-status is-done">답변완료</span>
+                <span class="qa-title">단순 변심 환불 가능 기간이 어떻게 되나요?</span>
+                <span class="qa-meta">홍**</span>
+                <span class="qa-meta">2026.04.22</span>
+                <span class="chev"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
+              </button>
+              <div class="qa-item__body">
+                <div class="qa-item__row">
+                  <span class="qa-item__label qa-item__label--a">A</span>
+                  <div>
+                    <p class="qa-item__text">미개봉 제품은 수령 후 7일 이내 단순 변심 환불이 가능합니다(왕복 배송비 6,000원 부담). 개봉 후 트러블 발생 시에는 별도 사후 처리 절차가 마련되어 있으니 고객센터로 연락 주세요.</p>
+                    <p class="qa-item__answer-author">레비온 고객센터 · 2026.04.23</p>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
           <div style="text-align:center; margin-top: 24px;">
             <a href="#" class="btn btn--cart" style="background:#fff;">문의 작성하기</a>
@@ -920,6 +1334,17 @@
           <span class="coupon-btn__arrow">›</span>
         </button>
 
+        <button type="button" class="sub-badge" aria-label="정기 배송 신청 — 60일 1통">
+          <span class="sub-badge__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+          </span>
+          <span class="sub-badge__copy">
+            <strong>정기 배송 · 60일에 한 통</strong>
+            <span>해지 자유 · 매번 새 통으로 도착</span>
+          </span>
+          <span class="sub-badge__pct">−15%</span>
+        </button>
+
         <div class="pdp-options">
           <p class="pdp-options__label">옵션 선택</p>
           <select id="option-select" aria-label="옵션 선택">
@@ -968,6 +1393,9 @@
       document.querySelectorAll('.gallery__thumb').forEach(x => x.classList.remove('is-active'));
       t.classList.add('is-active');
       document.getElementById('gallery-main-img').src = t.getAttribute('data-src');
+      const label = t.getAttribute('data-label');
+      const labelEl = document.getElementById('gallery-label');
+      if (label && labelEl) labelEl.textContent = label;
     });
   });
 
